@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="stil/ikona/favicon.ico" />
+
+        <link href="stil/canvas-stil.css" rel="stylesheet" />
+
+        <script src="pogon/jquery-1.12.0.min.js"></script>
+        <script src="pogon/canvas_funkcije.js"></script>
+        <title>Patternerenrettap</title>
+    </head>
+    <body>
+        <header id="zaglavlje">
+            <h1 id="logo">Patternerenrettap</h1>
+            <nav id="glavnaNav"></nav>
+            <nav id="kontrole">
+                <form id="opisRešetke">
+                    <!--<label for="opisRešetke"><h2>Postavke</h2></label>-->
+                    <fieldset id="postavkeFormata">
+                        <legend>Postavke formata</legend>
+                        <span id="orijentacijaFormata">
+                            <label for="polegnutiFormat" class="taj"><div>&#9617;</div></label>
+                            <input type="radio" id="polegnutiFormat" checked/>
+                            <label for="uspravniFormat"><div>&#9617;</div></label>
+                            <input type="radio" id="uspravniFormat" />
+                        </span>
+                        <span>
+                            <label for="širinaFormata">&nbsp;<span style="font-size: 150%;">&#9758;</span>&thinsp;:</label>
+                            <input type="number" min="10" max="1000" maxlength="4" id="širinaFormata" value="1000"/>
+                            <input type="range" min="10" max="1000" id="širinatorFormata" value="1000"/>
+                        </span>
+                        <span>
+                            <input type="checkbox" id="zahtjevProporcionalnosti" />
+                            <label for="zahtjevProporcionalnosti">&#9903;</label>
+                            &nbsp;
+                            <label for="izborOmjera"></label>
+                            <select id="izborOmjera">
+                                <optgroup label="skladni">
+                                    <option value="2" selected>oktava (2:1)</option>
+                                    <option value="1.7320508075688772">šestarski (&radic;3:1)</option>
+                                    <option value="1.618">Zlatni rez (&phi;:1)</option>
+                                    <option value="1.5">kvinta (3:2)</option>
+                                    <option value="1.4142135623730951">tritonus (ISO 216, &radic;2:1)</option>
+                                    <option value="1.3333333333333334">kvarta (4:3)</option>
+                                    <option value="1.25">velika terca (5:4)</option>
+                                    <option value="1.2">mala terca (6:5)</option>
+                                    <option value="1.125">sekunda (9:8)</option>
+                                    <option value="1">unison (1:1)</option>
+                                </optgroup>
+                            </select>
+                        </span>
+                        <span>
+                            <label for="visinaFormata"><span style="font-size: 150%;">&#9759;</span>&thinsp;:</label>
+                            <input type="number" min="10" max="1000" maxlength="3" id="visinaFormata" value="618" />
+                            <input type="range" min="10" max="1000" id="visinatorFormata" value="618"/>
+                            &permil;&nbsp;&nbsp;
+                        </span>
+
+                        <span>
+                            <label for="strokeColor">Boja:</label>
+                            <input type="color" id="strokeColor" value="#aa9988" />
+
+                            <input type="checkbox" id="držiKontrast" checked />
+                            <label for="držiKontrast">&#9901;</label>
+
+                            <input type="color" id="fillColor" value="#333333" />
+                            <input class="zadržiBox" type="checkbox" id="doFill" />
+                            <label class="zadržiBox" for="doFill">Dodaj pozadinu</label>
+                            Nasumičnica: 
+                            <canvas id="krasniCanvas">Randomizator</canvas>
+                        </span>
+                    </fieldset>
+                    <fieldset id="postavkeRešetke">
+                        <legend>Postavke rešetke</legend>
+                        <span>
+                            <select id="odabirTipaRešetke">
+                                <optgroup label="krugovi">
+                                    <option value="matrica">matrica &#9902; (4:1)</option>
+                                    <option value="krug2x2">krug na kvadrat &#9901;</option>
+                                    <option value="uskoPakiranje">usko pakiranje (6:1)</option>
+                                    <option value="cvijet">Cvijet života</option>
+                                </optgroup>
+                                <optgroup label="pravilne podjele">
+                                    <option value="No1">Br. 1 ( 3‧12‧12 )</option>
+                                    <option value="No2">Br. 2 ( 4‧6‧12 )</option>
+                                    <option value="No3">Br. 3 ( 4‧4‧8 )</option>
+                                    <option value="No4">Br. 4 ( 6‧6‧6 )</option>
+                                    <!--<option value="No4cis">Br. 4 45&deg; ( 6‧6‧6 )</option>-->
+                                    <!--<option value="No4dis">Br. 4 60&deg; ( 6‧6‧6 )</option>-->
+                                    <option value="No5">Br. 5 ( 3‧3‧4‧12 )</option>
+                                    <option value="No5bis">Br. 5 bis ( 3‧3‧4‧12 )</option>
+                                    <!--<option value="No5ter">Br. 5 ter ( 3‧3‧4‧12 )</option>-->
+                                    <option value="No6">Br. 6 ( 3‧3‧6‧6 )</option>
+                                    <option value="No6bis">Br. 6 bis ( 3‧3‧6‧6 )</option>
+                                    <option value="No7">Br. 7 ( 3‧4‧4‧6 )</option>
+                                    <option value="No7bis">Br. 7 bis ( 3‧4‧4‧6 )</option>
+                                    <option value="No8">Br. 8 &#9638; ( 4‧4‧4‧4 )</option>
+                                    <!--<option value="No8cis">Br. 8 cis ◇ ( 4‧4‧4‧4 )</option>-->
+                                    <!--<option value="No8dis">Br. 8 dis &#9638; ( 4‧4‧4‧4 )</option>-->
+                                    <option value="No9">Br. 9 ( 3‧3‧3‧4‧4 )</option>
+                                    <option value="No9bis">Br. 9 bis ( 3‧3‧3‧4‧4 )</option>
+                                    <option value="No10">Br. 10 ( 3‧3‧3‧3‧6 )</option>
+                                    <option value="No11">Br. 11 △ ( 3‧3‧3‧3‧3‧3 )</option>
+                                    <option value="No12">Br. 12 ( 4‧6‧12 ‣ 3‧4‧4‧6 )</option>
+                                    <option value="No13">Br. 13 ( 3‧4‧4‧6 ‣ 3‧3‧3‧4‧4 )</option>
+                                    <option value="No13bis">Br. 13 bis ( 3‧4‧4‧6 ‣ 3‧3‧3‧4‧4 )</option>
+                                    <option value="No13ter">Br. 13 ter ( 3‧4‧4‧6 ‣ 3‧3‧3‧4‧4 )</option>
+                                    <option value="No14">Br. 14 ( 3‧3‧3‧4‧4 ‣ 3‧3‧3‧3‧3‧3 )</option>
+                                    <option value="No14bis">Br. 14 bis ( 3‧3‧3‧4‧4 ‣ 3‧3‧3‧3‧3‧3 )</option>
+                                    <option value="No14ter">Br. 14 ter ( 3‧3‧3‧4‧4 ‣ 3‧3‧3‧3‧3‧3 )</option>
+                                    <option value="No14quat">Br. 14 quat ( 3‧3‧3‧4‧4 ‣ 3‧3‧3‧3‧3‧3 )</option>
+                                    <!--<option value="No14quint">Br. 14 quint ( 3‧3‧3‧4‧4 ‣ 3‧3‧3‧3‧3‧3 )</option>-->
+                                    <option value="No15">Br. 15 ( 3‧3‧4‧12 ‣ 3‧3‧3‧3‧3‧3 )</option>
+                                    <option value="No16">Br. 16 ( 3‧3‧4‧12 ‣ 3‧3‧3‧4‧4 ‣ 3‧3‧3‧3‧3‧3 )</option>
+                                </optgroup>
+                            </select>
+                        </span>
+                        <span>
+                            <label for="duljinaStranice">a:</label>
+                            <input type="number" min="10" max="250" maxlength="3" id="duljinaStranice" value="30"/>
+                            <input type="range" min="10" max="250" id="duljinatorStranice" value="30"/>
+
+                            <input type="checkbox" id="snapToInt" />
+                            <label for="snapToInt">&#9901;</label>
+                            <span>
+                                <label for="brojPodjela">n(a):</label>
+                                <input type="number" min="1" max="100" maxlength="3" id="brojPodjela" value/>
+                                <input type="range" min="1" max="100" id="brojatorPodjela" value/>
+                            </span>
+                            ⚭&nbsp;&nbsp;
+                            <span>
+                                <label for="razmakPodjela">R(+):</label>
+                                <input type="number" min="-100" max="100" maxlength="3" id="razmakPodjela" value="0"/>
+                                <input type="range" min="-100" max="100" id="razmakatorPodjela" value="0"/>
+                            </span>
+                        </span>
+                        <button id="dodajCanv">&#9769;</button>
+                    </fieldset>
+
+
+
+
+                    <input type="submit" value="Izvrši" />
+                    <button id="spremiCanv">Spremi</button>
+
+                </form>
+            </nav>
+        </header>
+
+        <main id="canvasPaleta">
+            <canvas id="glavniCanvas" width height></canvas>
+            <section id="spremnikPrikaza"><br style="clear: both; height: 0;" /></section>
+        </main>
+        <script src="pogon/patternerentettap_baza.js"></script>
+        <script src="pogon/crtajnje_oblika.js"></script>
+        <script src="pogon/crtanje.js"></script>
+        <script src="pogon/paljenje.js"></script>
+        <script src="pogon/kontrole.js"></script>
+        
+
+
+        <footer id="podnožje"><b>&copy;</b> Trpimri Jeronim Ježić</footer>
+    </body>
+</html>

@@ -1,0 +1,1934 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Vježbe iz kolegija Digitalni multimedij 2" />
+    <meta name="keywords" content="Web produkcija, Web dizajn" />
+    <meta name="author" content="Trpimir Jeronim Ježić" />
+
+    <link rel="stylesheet" type="text/css" href="stil/tipografija.css" />
+    <link rel="stylesheet" type="text/css" href="stil/osnovni-prijelom.css" />
+    <link href="stil/colorbox.css" rel="stylesheet" />
+
+    <script src="pogon/html2canvas.js"></script>
+    <script src="pogon/jquery-1.11.2.min.js"></script>
+    <script src="pogon/jquery.colorbox-min.js"></script>
+
+    <title>
+       DM 2
+    </title>
+</head>
+
+<body>
+    <main>
+        <article id="vježba1">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span><br />
+                    <small>uredništvo, dizajn, UX, web produkcija</small><br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 1</span>
+                </h1>
+            </section>
+            <section>
+                <h4><span class="crveni">Sadržaj vježbi: </span>Web dizajn <span class="krepak">i</span> web produkcija</h4>
+                <div class="triptih">
+                    <div>
+                        <h5>Uredništvo</h5>
+                        <p>dizajn i copywriting</p>
+                        <ul>
+                            <li>Analiza naloga i tržišta</li>
+                            <li>Copywriting</li>
+                            <li>Grafički dizajn</li>
+                            <li>Prijelom sadržaja</li>
+                            <li>UX</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Front-end</h5>
+                        <p><em>statični web</em></p>
+                        <ul>
+                            <li class="crveni">HTML</li>
+                            <li class="crveni">CSS</li>
+                            <li class="crveni">JavaScript</li>
+                            <li>Node.js (...)</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div style="color: #aaa">
+                        <h5>Back-end</h5>
+                        <p><em>dinamički web</em></p>
+                        <li>PHP</li>
+                        <li>.NET</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>Ruby</li>
+                        <li>Node.js (?)</li>
+                        <li>.\\ Haskell</li>
+                        <lI>...</lI>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>Uloge u front-end web produkciji</h4>
+                <ul class="dvojna-lista" style="margin-top: 6em;">
+                    <li>urednik tekstovnog sadržaja</li>
+                    <li>urednik slikovnog sadržaja</li>
+                    <li>grafički (web) dizajner</li>
+                    <li>UX</li>
+                    <li><code><</code>html<code>></code> koder</li>
+                    <li>.css[er]</li>
+                    <li>JavaScript('programer').skripter</li>
+                    <li>tester</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Raspored sadržaja vježbi</h4>
+                <ol style="margin-top: 6em;">
+                    <li>
+                        <h5>Dizajn, copywrighting i UX</h5>
+                        <ol>
+                            <li>Uvodna vježba: UX i dizajn web stranica</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <h5>HTML</h5>
+                        <ol start="2">
+                            <li>HTML osnove: Jednostavni i složeni HTML elementi</li>
+                            <li>'Aktivni' HTML elementi i njihovi atributi</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <h5>CSS</h5>
+                        <ol start="4">
+                            <li>Osnove CSS oblikovanja</li>
+                            <li>Napredno CSS3 oblikovanje responzivnih prijeloma</li>
+                            <li>CSS složeni selektori i specifičnost u responzivnom UI dizajnu</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <h5>Ostalo</h5>
+                        <ol start="7">
+                            <li>? <em style="color: #aaa"> // JavaScript plugin-i, SASS, npm, WordPress</em></li>
+                        </ol>
+                    </li>
+                </ol>
+            </section>         
+            <section id="webKomunikacija">
+                <h4>Vizualna <span class="krepak">(multimedijalna)</span> komunikacija</h4>
+                <figure class="cijeliEkran">
+                    <img src="materijali/vj1/web-u-slici1.jpg" />
+                    <figcaption>Proizvod web produkcije (također) <b>jest</b> poruka.</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h4>Grafika</h4>
+                <div>
+                    <img src="materijali/vj1/newspaper-pile.jpg" width="500">
+                    <img src="materijali/vj1/example1.gif" width="300" style="margin: 200px 0 50px 50px;">
+                </div>
+            </section>
+            <section>
+                <h4>Dinamika</h4>
+                <canvas id="dinamikaWeba"></canvas>
+                <img src="materijali/vj1/poruka.png" id="dinamikaGif" />
+            </section>
+            <section>
+                <h3 class="kardinal">Brainstorming <span class="brojćek">1</span></h3>
+                <p>(lista ideja, analiza tržišta, ciljane publike, tehn. mogućnosti)</p>
+            </section>
+            <section>
+                <h4>Varijacije</h4>
+                <ul class="dvojna-lista">
+                    <li><a href="http://www.studiomarani.it/en/" class="cb">Studio Marani</a></li>
+                    <li><a href="http://burciaga.co/" class="cb">Ismael Burciaga</a></li>
+                    <li><a href="http://www.filipnordin.com/" class="cb">Filip Nordin</a></li>
+                    <li><a href="http://www.lamourfou.be/en" class="cb">L'Amour Fou</a></li>
+                    <li><a href="http://www.pentagram.com/#/home" class="cb">Pentagram</a></li>
+                    <li><a href="http://www.lastdaysofivory.com/" class="cb">Last days of ivory</a></li>
+                    <hr />
+                    <li><a href="http://creativeclashgame.com/" class="cb">Creative Clash</a></li>
+                    <li><a href="http://yougottalovefrontend.com/#page-home" class="cb">YGLF</a></li>
+                    <li><a href="http://www.vox.com/" class="cb">Vox</a></li>
+                    <li><a href="http://webbyawards.com/winners/2015/" class="cb">Webby Awards</a></li>
+                    <li><a href="http://www.ted.com/" class="cb">TED</a></li>
+                </ul>
+                <ul class="dvojna-lista">
+                    <li><a href="http://spotmetering.com/" class="cb">Spot metering</a></li>
+                    <li><a href="http://www.jutarnji.hr/" class="cb">Jutarnji.hr</a></li>
+                    <li><a href="http://www.exmouth-view.co.uk/" class="cb">Exmouth View</a></li>
+                    <li><a href="http://www.rudgwicksteamshow.co.uk/" class="cb">Rudgwick</a></li>
+                    <li><a href="https://www.konzum.hr/" class="cb">Konzum</a></li>
+                    <li><a href="http://www.mojmaksimir.com/" class="cb">CK Maksimir</a></li>
+                </ul>
+            </section>            
+            <section>
+                <h4>whodunnit?</h4>
+                <video id="whodunnit" width="500" height="300" controls>
+                    <source src="materijali/vj2/Test Your Awareness - Whodunnit- - YouTube[via torchbrowser.com].mp4" type="video/mp4" />
+                    Nema videa. Nađi ga sam.
+                </video>
+            </section>
+            <section class="puniEkran">
+                <h4><span class="krepak">vizualna</span> komunikacija</h4>
+                <figure>
+                    <img src="materijali/vj2/slika-u-slici1.jpg" id="slikaUslici" />
+                    <figcaption>Grafički proizvod <b>jest</b> poruka.</figcaption>
+                </figure>
+            </section>
+            <section>
+                <p id="urođenoNaučeno" class="središnji" style="cursor: pointer;">
+                    urođeno
+                    <span class="zrno">&raquo;</span>
+                    <span class="poanta">?</span>
+                    <span class="zrno">&laquo;</span> naučeno
+                </p>
+            </section>
+            <section class="puniEkran svijetli">
+                <h4>anatomija vida</h4>
+                <figure style="margin-top: 60px;">
+                    <img src="materijali/vj2/oko-i-mrežnica.png" style="width: 100%; height: auto;" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section class="puniEkran">
+                <h4>anatomija vida</h4>
+                <figure>
+                    <img src="materijali/vj2/oko-u-slici.jpg" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <h4>ganzfeld</h4>
+                <canvas id="ganzfeld"></canvas>
+            </section>
+            <section>
+                <h4>isticanje / razumljivost / kontekst</h4>
+                <figure id="patkice">
+                    <img src="materijali/vj2/AD-Annoying-Photos-OCD-48.jpg" />
+                    <!--<figcaption></figcaption>-->
+                </figure>
+            </section>
+            <section>
+                <h4>prostornost</h4>
+                <figure>
+                    <img src="materijali/vj2/oko-čunj.png" />
+                    <img src="materijali/vj2/pokazatelji-dubine.png">
+                </figure>
+            </section>
+            <section>
+                <h4>grupiranje / isticanje</h4>
+                <canvas id="razlikaBoja"></canvas>
+                <canvas id="razlikaOblika"></canvas>
+                <canvas id="razlikaVeličina"></canvas><br />
+                <canvas id="razlikaPoložaja1"></canvas>
+                <canvas id="razlikaPoložaja2"></canvas>
+                <canvas id="razlikaPoložaja3"></canvas>
+                <canvas id="razlikaPoložaja4"></canvas><br />
+            </section>
+            <section>
+                <h4>povezanost / hijerarhija</h4>
+                <figure class="cijeliEkran">
+                    <img src="materijali/vj2/prijelomi.png" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <h4>jednostavnost</h4>
+                <canvas id="jednostavnost"></canvas>
+            </section>
+            <section>
+                <h4>sklad</h4>
+                <canvas id="harmonije"></canvas>
+                <p class="središnji">
+                    <span class="zrno">&raquo;</span>
+                    <a class="cb" href="materijali/vj2/Patternerenrettap/index.html">patternerenrettap</a>
+                    <span class="zrno">&laquo;</span>
+                </p>
+            </section>
+            <section>
+                <h4>nepravilnosti</h4>
+                <figure id="OCD">
+                    <img src="materijali/vj2/OCD1.jpg" />
+                </figure>
+            </section>
+            <section>
+                <h4>ritam<span class="krepak"> i </span>simetrije</h4>
+                <canvas id="simetrije"></canvas>
+            </section>
+            <section>
+                <p id="priča" class="središnji">
+                    subjektivno
+                    <span class="zrno">&raquo;</span>
+                    <span class="poanta">Priča</span>
+                    <span class="zrno">&laquo;</span> objektivno
+                </p>
+                <figure class="triptih" id="subjektivnoObjektivno">
+                    <img src="materijali/vj2/rembrandt.jpg" />
+                    <img src="materijali/vj2/velazquez.jpg" />
+                    <img src="materijali/vj2/brueghel.jpg" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <p class="središnji">
+                    razumljivo
+                    <span class="zrno">&raquo;</span>
+                    <span class="poanta">Priča</span>
+                    <span class="zrno">&laquo;</span> vjerodostojno
+                </p>
+                <figure class="triptih" id="razumljivoVjerodostojno">
+                    <img src="materijali/vj2/slavoluk.jpg" />
+                    <img src="materijali/vj2/detroit.jpg" />
+                    <img src="materijali/vj2/deli.jpg" />
+                    <!--<figcaption></figcaption>-->
+                </figure>
+            </section>
+            <section>
+                <p class="središnji">
+                    doživljaj
+                    <span class="zrno">&raquo;</span>
+                    <span class="poanta">Priča</span>
+                    <span class="zrno">&laquo;</span> činjenica
+                </p>
+                <figure class="triptih" id="doživljajČinjenica">
+                    <img src="materijali/vj2/david-i-golijat.jpg" />
+                    <img src="materijali/vj2/david-maraat.jpg" />
+                    <img src="materijali/vj2/srednjovjeki-triptih.jpg" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <p class="središnji">
+                    pojam
+                    <span class="zrno">&raquo;</span>
+                    <span class="poanta">Priča</span>
+                    <span class="zrno">&laquo;</span> pojava
+                </p>
+                <figure class="triptih" id="pojamPojava">
+                    <img src="materijali/vj2/justinian.jpg" />
+                    <img src="materijali/vj2/obrnuta-perspektiva.jpg" />
+                    <img src="materijali/vj2/renesansna-perspektiva.jpg" />
+                </figure>
+            </section>
+            <section>
+                <p class="središnji">
+                    jezik
+                    <span class="zrno">&raquo;</span>
+                    <span class="poanta">Priča</span>
+                    <span class="zrno">&laquo;</span> naturalizam
+                </p>
+                <figure class="triptih" id="simboličnoDatost">
+                    <img src="materijali/vj2/pismo-auto.jpg" />
+                    <img src="materijali/vj2/hieroglifi.jpg" />
+                    <img src="materijali/vj2/špilja-lascaux.jpg" />
+                    <!--<figcaption></figcaption>-->
+                </figure>
+            </section>
+            <section>
+                <h3 class="kardinal">Zadatak <span class="brojćek">1</span></h3>
+                <p>(analiza sadržaja, rekonstrukcija ideja, analiza tržišta i ciljane publike, skice, prototipi)</p>
+            </section>
+            <section>
+                <p class="zatvor">Kraj vježbe 1</p>
+            </section>
+        </article>
+
+        <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <article id="vježba2">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span><br />
+                    <small>Uvod u web razvoj, Jednostavni i složeni HTML elementi</small><br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 2</span>
+                </h1>
+            </section>
+            <section>
+                <h4>web sjedište</h4>
+                <div id="repozitorij">
+                    <ul>
+                        <li>
+                            <h5>STIL</h5>
+                            <ul>
+                                <li>stil.css</li>
+                                <li>prijelom.css</li>
+                                <li>tipografija.css</li>
+                                <li>sfx.css</li>
+                                <li>...</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>SKRIPTE</h5>
+                            <ul>
+                                <li>navigacija.js</li>
+                                <li>formular.js</li>
+                                <li>plug-in-1.js</li>
+                                <li>plug-in-2.js</li>
+                                <li>...</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>RESURSI</h5>
+                            <ul>
+                                <li>SLIKE</li>
+                                <li>PISMA</li>
+                                <li>IKONE</li>
+                                <li>DATA</li>
+                                <li>...</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>SADRŽAJ</h5>
+                            <ul>
+                                <li>O_nama.html</li>
+                                <li>povijest.html</li>
+                                <li>galerija.html</li>
+                                <li>trgovina.html</li>
+                                <li>...</li>
+                            </ul>
+                        </li>
+                        <li style="background-color: transparent;">index.html</li>
+
+                    </ul>
+                    <br style="clear: both">
+                </div>
+            </section>
+            <section>
+                <h4><span class="krepak">umjetna </span>inteligencija</h4>
+                <figure>
+                    <img src="materijali/vj3/rodin.png" class="na-dno" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section class="puniEkran">
+                <h4><span class="krepak">umjetna </span>inteligencija</h4>
+                <figure>
+                    <img src="materijali/vj3/terminator.jpg" class="na-dno" />
+                    <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <h4>turingov test</h4>
+                <figure id="turingSearle">
+                    <img src="materijali/vj3/turing-searle1.jpg" />
+                    <!--<figcaption>Ako ispitivač ne može vidjeti razliku, ispit je položen.</figcaption>-->
+                </figure>
+            </section>
+            <section>
+                <h4>tekst <span class="krepak">i računala</span></h4>
+                <div id="primjerČlanka">
+                    <h4><em>Društvo spektakla – kritika samospektaklizacije</em>, Galerija Bačva, ožujak–travanj</h4>
+                    <h1>Razotkrivanje mita o spektaklu</h1>
+                    <p class="auktor">Mia Orsag</p>
+                    <p>Izložba <em>Društvo spektakla – kritika samospektaklizacije</em> u Domu Hrvatskoga društva likovnih umjetnika okuplja radove devet inozemnih i hrvatskih autora, a u sklopu EU-projekta REALISE, koji koordinira Heinrich Böll Stiftung
+                        Brandenburg iz Njemačke. Nadahnuta alternativnim umjetničkim praksama i djelovanjem Guyja Deborda, izložba redefinira i rekontekstualizira društvo spektakla kao instrumentarij novih teorijskih i umjetničkih alternativa putem novih
+                        čitanja, ali i kritika današnjega društva samospektaklizacije.</p>
+                    <p>Performativno predavanje litavskog umjetnika Gintautasa Mažeikisa <em>Non Comformist Public Art Contra Society of Self-Spectaclisation</em>, dokumentirana u obliku videorada, ne samo da ocrtava uvod u fenomenologiju izložbe nego istodobno
+                        predstavlja i autorski statement te dekonstruira značenje Debordove filozofije u vremenu samospektaklizacije. Mažeikisovo je predavanje kritika <i>društva spektakla</i> kao teorijska analiza, ali i kontinuirana umjetničko-politička
+                        praksa. Reinterpretira sama sebe – filozofa, cinično se koristeći estetikom korporativne prezentacije, koja s jedne strane neodoljivo podsjeća na sovjetski agitprop, a s druge predstavlja oružje u borbi protiv spektaklizacije te
+                        navodi kako je u današnjem vremenu „spektakularna prezentacija izbjeglica pomogla održavanju stanja iznimke, legitimaciji totalnog nadzora i razvoju upravljačkih tijela politici“.</p>
+                    <h3>Fantazija i ironija</h3>
+                    <p>Martina Miholić instalacijom <em>Ambitious Toys</em> kreira ambivalentan prostor za koji ne možemo sa sigurnošću tvrditi je li namijenjen djevojčici ili odrasloj ženi. U donjem djelu ružičaste kućice izgrađene od knaufa nalazi se minijaturni
+                        stolić i stolac, dok je na gornjem dijelu, povezanu srebrnim ljestvama, krevet. Sa se stražnje strane na svojevrsnoj polici nalaze različiti uporabni predmeti. Autorica navodi kako „podrobnijim promatranjem predmeta postajemo svjesni
+                        pomaka u predstavljanju realnosti, u kojem taj naizgled dječji, infantilan, svijet možda i nije toliko siguran, infantilan i neokaljan“. Dominantna ružičasta, srebrna i bijela boja transformiraju predmete za svakodnevnu uporabu
+                        u fetišizirane objekte svijeta spektakla.</p>
+                    <p><em>Hrvatski proizvod</em> Vlaste Delimar sastoji se od osam plakata izloženih u galeriji Bačva i oglasnoga stupa na Zrinjevcu, koji je cenzuriran zbog brojnih poziva građana policiji i komunalnim redarima, pod obrazloženjem da ih
+                        sadržaj uznemirava i vrijeđa te uklonjen tjedan ranije nego što je bilo predviđeno. Na plakatima je autorica u društvu umjetnika/ica značajnih za širu zajednicu. Vlasta Delimar u radu polazi od konzumerističke forme plakata, a
+                        umjetnici/ice na plakatima preuzimaju ulogu brenda, dok ih Vlasta Delimar glamurozno predstavlja. U tom kontekstu nije nevažno spomenuti da je umjetnica na svim plakatima naga tijela, kao i neki od umjetnika-sudionika projekta.
+                        Na taj se način ironično iščitava učestali erotizam, mačizam i manipulacija ženskim tijelima u korporativnim kampanjama.</p>
+                </div>
+            </section>
+            <section>
+                <h4>tekst <span class="krepak">i računala</span></h4>
+                <div id="primjerČlanka" class="besmisleniKod">
+                    <code>
+                        r˙S˙S˙&"d˙+(e˙^˙]˙b˙	e˙@9˙5's˙,%y˙s˙`˙S˙73|˙>9˙7Ś,)-&#[ŮPJŚ˙YQ’˙`Yš˙RK‹˙
+                    </code><br />
+                    <code>=˙B˙D˙L˙Z˙($i˙1-s˙84z˙?:˙GA†˙MFŠ˙RKŽ˙YS•˙KE„˙)&`˙*&T˙o˙†˙h˙\˙l˙N˙V˙Z˙</code> <br />
+                    <code>
+                        \˙]˙]˙(#q˙GN˙;źĹ˙>Q~˙B7{˙h˙`˙\˙2-o˙9Ą&46'$3*%VŕSL…˙ZS‹˙b[“˙OI˙0˙c˙T˙"_˙($e˙,)h˙2.l˙94r˙?:w˙FA}˙MF‚˙RK…˙YS‹˙KF}˙2.b˙95e˙/+_˙]˙H˙S˙˙l˙†˙v˙Y˙N˙X˙#`˙JM|˙N¬Î˙I[Š˙MBx˙'#b˙h˙		a˙e˙	9Ë'>1-UéXQ˙^W…˙h`Ź˙QJt˙7˙N˙S˙"X˙($\˙.*b˙50g˙7l˙c=q˙JDw˙QJ|˙VO˙]V…˙OHu˙2-X˙61X˙)%C˙=˙Y˙c˙t˙‡˙|˙d˙]˙h˙m˙z˙"`˙ygt˙av…˙tnz˙61a˙k˙^˙b˙y˙0qm+$fópgm˙ulr˙bx~˙e=[˙$˙6˙˙C˙H˙"N˙)#S˙0*Y˙80^˙@8c˙I@j˙NEm˙WMt˙H@e˙'#C˙($?˙S˙]˙P˙]˙a˙h˙h˙U˙R˙g˙Z˙X˙s˙($^˙PHi˙XNr˙=5]˙€˙r˙‚˙RëR‡54;f–’š˙­¦±˙ŻŞ´˙ąłľ˙¬¨°˙š—ś˙śš˘˙žśĄ˙ ť¨˙˘ź«˙¤ ¬˙¦ŁŻ˙¨Ą±˙«¦˛˙®©µ˙´°Ľ˙¶˛˝˙µ°»˙®¨˛˙Ž‰‰˙31t˙99˙„Ź˙ź›ź˙Ą ¦˙§Ł§˙©Ą¬˙§Ł®˙Ť‹¨˙QPŹ˙EA˙@?ś˙}˙USŹ˙;:‰˙‡˙¨¤«˙hez˙88©˙55¦˙VUľ˙PK`č!Da‡‚ŞÓÎĚ˙Â˝»˙ÂľĽ˙Äż˝˙ÁĽ»˙Äľ˝˙ÂĽ»˙żş¸˙˝¸¶˙˝·µ˙»µł˙¸´±˙·˛Ż˙¶°®˙µŻ­˙ł®¬˙˛­Ş˙°¬Ą˙Łž”˙^\n˙%%Ł˙LJs˙Ś‡x˙˘ś™˙¦ ž˙¨˘ˇ˙¦ˇź˙¤ž›˙“ŤŽ˙ysz˙UP}˙=™˙fc\˙ROi˙//‰˙HFS˙QP`˙**w˙EEË˙BA‡˙@@»˙_[€˙<91heaaąăľľ˙xqq˙haa˙ ››˙¸˛˛˙ł­­˙±««˙ż©©˙ż©©˙­¨¨˙¬¦¦˙¬¦¦˙«ąą˙¨˘ˇ˙§ˇś˙ˇš•˙ž‹˙c^}˙ />-u˙Š˙ž˙-,l˙CAX˙a]k˙{ux˙Š˙Ž‰˙‡˙}w‚˙~x~˙^X‚˙˙"P˙]˙˙}˙ ˙LLÚ˙:9˙K˙..»˙]ZŚ˙1-%aWTTŠĂ˝˝˙~~˙gaa˙±¬¬˙¸˛˛˙¶°°˙´®®˙ł¬¬˙˛¬¬˙˛««˙Ż©©˙«Ą¤˙­§Ł˙ŁžŁ˙Š†¦˙lj§˙YYŞ˙HFŁ˙°ŻÝ˙ŽŤż˙”˙VVť˙˙aaŠ˙QP˙98t˙:9j˙HFt˙FDj˙XSx˙KHk˙)(…˙«˙š˙+*ś˙VS˙miĄ˙][˙!u˙-,»˙hfş˙kfm˙dKHHrÄľľ˙ÂĽĽ˙ĹŔŔ˙»µµ˙ąłł˙¸±±˙¶±±˙µŻŻ˙¶°°˙˛¬Ş˙˛¬Ş˙˝·»˙žš˝˙’‘Ĺ˙ś›Ć˙¬©Ŕ˙Ş¦´˙Ąź˘˙°Ş˙ZVt˙
+                        ›˙;;Đ˙QPŔ˙ki¤˙OO‡˙~˙)(~˙20z˙54s˙[V{˙-+{˙›˙0/ ˙20~˙('‰˙d_f˙rmb˙DA^˙//ľ˙fcś˙„}t˙LIS˙2°;99\Ă˝˝˙Ŕşş˙Ľ¶¶˙»´´˙ąłł˙¸˛˛˙ął˛˙µ°Ż˙ˇśˇ˙¤žŞ˙ŔĽĘ˙­¨ľ˙”Ź¨˙˛¬­˙°Ş¤˙¬¦˘˙ˇ›š˙nj}˙-,y˙"" ˙HG«˙kh™˙DC¸˙GF˘˙65 ˙;ş˙A@ˇ˙::–˙@?°˙TRą˙''ť˙0.¤˙ni„˙o˙{˙x˙#"n˙~˙((«˙/-L˙>;C˙%#P˙SĹ&%%Fľ¸¸ţÄľľ˙ľ¸¸˙Ľ¶¶˙»¶¶˙˝¸¶˙­§«˙—’Ą˙ČĆÔ˙ÝŰă˙ÂĽż˙®¨§˙˛¬¨˙Ż¨¨˙°ŞŞ˙­§ ˙hd…˙‹˙87ł˙SQ¸˙]Zź˙OM›˙@?ş˙45ż˙11·˙;«˙SQ‰˙TRŽ˙DDĽ˙<;¦˙ź˙ig¬˙şµ˛˙..›˙›˙“˙dd·˙ = =Ő˙((˝˙87±˙ = =“˙**—˙Bz1ą˛˛ôćŕŕ˙żąą˙ľ¸¸˙ŕą¸˙¦ ¨˙ť«˙ňńö˙íęč˙·˛°˙°ş©˙µ®®˙ł­­˙˛¬¬˙˛¬¦˙fb‰˙('˙†§˙©¤¨˙ąź˘˙ˇ›˘˙™“ ˙’ťł˙}ył˙qp«˙ />/Č˙KJˇ˙JJ±˙44 ˙Ł˙=;˛˙‚~Ź˙Š„z˙.-Ž˙99Ľ˙-,‘˙ˇ˙GF¨˙PM˙BA ˙MLŻ˙33‘˙*T­¨¨ćČÂÂ˙Á»»˙ÄľĽ˙š”Ł˙Łś¬˙÷öů˙ŰŮŘ˙Ż©©˙·±±˙·±±˙¶ŻŻ˙´®®˙·°­˙‹…ś˙MJ”˙‹†ź˙Ş¤¤˙±«¨˙®¨¦˙­§Ą˙®§Ł˙Ż© ˙±Şž˙¨˘™˙PO°˙>>Ç˙ť˙)(š˙qnĄ˙ť—•˙š”˙KHn˙##ł˙>>°˙a^Ł˙66É˙FD}˙upc˙,,”˙™˙x˙'c		ź™™ÖĚĆĆ˙˝·ą˙¦ˇ¬˙“Žˇ˙čâá˙ŢŮŘ˙ł­­˙Ľ¶¶˙»µµ˙şłł˙·±±˙¶°°˙´ŻŻ˙‡‚Ł˙ť–¤˙ˇ›˘˙¶°«˙±«§˙¦  ˙–‘™˙~zŹ˙lg˙kg‰˙xs‡˙\Y˙¸˙URŞ˙Łťź˙©Ł™˙ ›”˙zts˙+*”˙AAĹ˙::Ç˙MLľ˙EDÁ˙==ş˙\Z’˙*)›˙Ž˙
+                        –˙*K’ŚŚÄŃĘÉ˙¸˛¶˙§ ­˙˝·ş˙ČĂĂ˙Ľ¶¶˙ľ¸¸˙Ŕş¸˙şł´˙ł­Ż˙µ°Ż˙µ°®˙˛­¬˙©¤¨˙~–˙‹†™˙zu˙d`˙PMz˙NKy˙^Z˙ql†˙{v‰˙kgw˙˙'&«˙vq‰˙”ŽŠ˙‹‡…˙db{˙A?Ť˙LL¸˙LLČ˙++¨˙21Š˙)(—˙""˘˙BA‹˙€˙+*Ż˙$$Ë…­ŃËË˙ĆŔż˙ČĂÁ˙ˇ››˙şµµ˙ÂĽĽ˙ął¶˙źš«˙‡‚ź˙vr—˙zv—˙so“˙nj˙b^Ś˙c`Ž˙vr“˙UQ€˙!‡˙31“˙B@•˙FDŽ˙EB†˙KHŽ˙21›˙65ł˙™”Ą˙jf˙&&o˙˙=˙ol§˙mj˛˙jg•˙y˙"!’˙%%Ą˙$$¨˙‡˙33»˙rpľ˙748kvrr–ŃËË˙ĘĂĂ˙˛¬¬˙…˙ÇÁÁ˙ÂĽĽ˙¶°¶˙Ż«ł˙¶±µ˙ş´µ˙°Ş°˙¨Ł¬˙ŞĄ­˙´Ż°˙»µ¬˙®¨ˇ˙YVŻ˙‰ŕ˙ËĘć˙˝»×˙ŻŻÓ˙“Ń˙…á˙›—ŕ˙§Ł¨˙Ş¤™˙_[z˙MLĄ˙VT–˙TQ}˙€{‡˙’Ś‘˙]Yr˙
+                        ˙''°˙67ľ˙))}˙%%ś˙_^®˙Ž˙1/,Tdaa~ŇĚĚ˙ĎÉÉ˙—‘‘˙˙ÎČČ˙ÁĽĽ˙Ă˝Ľ˙Â˝Ľ˙Ŕşş˙ľ¸¸˙ľ¸·˙ľ·¶˙ľ·´˙±«±˙tp¨˙`_Ć˙ŽŚË˙ĹŔ¸˙µŻ©˙Ż¨Ł˙±ŞĄ˙ą˛©˙ÍĆ»˙ďęŕ˙ĆŔľ˙‡‚}˙32˙„Ł˙ł­ ˙miŽ˙=:z˙MJp˙$#˙A@˘˙++©˙US¤˙,+›˙¬˙ROq˙Šü(!">PMMgŇĚĚ˙ŇËË˙Ž‰‰˙‘ŚŚ˙ĎÉÉ˙Ă˝˝˙ÁĽĽ˙Ŕ»»˙Ŕşş˙żşş˙˝¸¸˙˝··˙ľ·¶˙©¤±˙źšż˙ÍÉÓ˙·±«˙ł­¬˙ł­®˙ł­­˙˛¬¬˙°ŞŞ˙Ş¤¤˙±«Ş˙ˇťš˙qmu˙1/Ź˙ť—›˙ź™ž˙”Ž™˙ˇ›ž˙fd‹˙™˙;:s˙..ž˙A?˙**ž˙''ş˙64…˙…{ň*B@@OÎČČ˙ÓÍÍ˙›••˙ŹŠŠ˙ŃËË˙Ĺżż˙Äľľ˙Â˝˝˙ÂĽĽ˙Ŕ»»˙ľąą˙˝¸¸˙Ľ¶¶˙ĂĽ»˙ŹŠ„˙¬¦¤˙ął´˙µ°°˙´ŻŻ˙ł®®˙˛¬¬˙ł­«˙±«¦˙Ž‰‹˙PLH˙VS]˙FC˙š”—˙Ź‰™˙¦ ˇ˙­§˘˙‡‚˙75‹˙Ź‹’˙JHŤ˙tpŚ˙1.m˙33¶˙<;ž˙vruä 7448éââűňěě˙¶±±˙„˙óíí˙ćáá˙ĺŕŕ˙ĺżż˙ăľľ˙âľľ˙ŕ»»˙ľąą˙˝¸¸˙âľľ˙ś˙¦ˇˇ˙»µµ˙·±±˙µ°°˙´®®˙´®­˙łť¦˙a]’˙?>˙&#^˙TQu˙FE˘˙ŹŠ•˙¨˘Ł˙«ĄŁ˙§ ™˙JG‡˙vq•˙¬§›˙SQ…˙~y‡˙1/j˙++°˙‡‚“˙MJŕ
+                    </code>
+                </div>
+            </section>
+            <section>
+                <h4>tekst <span class="krepak">i računala</span></h4>
+                <div id="primjerČlanka" class="besmisleniKod">
+                    tu ti je nadnaslov <span class="kvač">&raquo;</span><code>
+                        r˙S˙S˙&"d˙+(e˙^˙]˙b˙	e˙@9˙5's˙,%y˙s˙`˙S˙73|˙>9˙7Ś,)-&#[ŮPJŚ˙YQ’˙`Yš˙RK‹˙
+                    </code><span class="kvač">&laquo;</span> do tuda <span class="kvač"> &#124; </span> tu počinje naslov <span class="kvač">&raquo;</span><code>
+                        =˙B˙D˙L˙Z˙($i˙1-s˙84z˙?:˙GA† ˙MFŠ˙RKŽ˙YS•˙KE„ ˙)&`˙*&T˙ o˙†˙h˙\˙l˙ N˙V˙Z˙
+                    </code><span class="kvač">&laquo;</span> i tu završi <span class="kvač"> &#124; </span> a ovo je ime auktora <span class="kvač">&raquo;</span><code>
+                        \˙]˙]˙(#q˙GN˙;{˙h˙
+                    </code><span class="kvač">&laquo;</span> do tuda <span class="kvač"> &#124; </span> kreće prvi odlomak <span class="kvač">&raquo;</span><code>
+                        `˙\˙2-o˙9Ą&46'$3*%VŕSL…˙ZS‹˙b[“˙OI˙0˙c˙T˙"_˙($e˙,)h˙2.l˙94r˙?:w˙FA}˙MF‚˙RK…˙YS‹˙KF}˙2.b˙95e˙/+_˙]˙H˙S˙˙l˙†˙v˙Y˙N˙X˙#`˙JM|˙N¬Î˙I[Š˙MBx˙'#b˙h˙		a˙e˙	9Ë'>1-UéXQ˙^W…˙h`Ź˙QJt˙7˙N˙S˙"X˙($\˙.*b˙50g˙7l˙c=q˙JDw˙QJ|˙VO˙]V…˙OHu˙2-X˙61X˙)%C˙=˙Y˙c˙t˙‡˙|˙d˙]˙h˙m˙z˙"`˙ygt˙av…˙tnz˙61a˙k˙^˙b˙y˙0qm+$fópgm˙ulr˙bx~˙e=[˙$˙6˙˙C˙H˙"N˙)#S˙0*Y˙80^˙@8c˙I@j˙NEm˙WMt˙H@e˙'#C˙($?˙S˙]˙P˙]˙a˙h˙h˙U˙R˙g˙Z˙X˙s˙($^˙PHi˙XNr˙=5]˙€˙r˙‚˙RëR‡54;f–’š˙­¦±˙ŻŞ´˙ąłľ˙¬¨°˙š—ś˙śš˘˙žśĄ˙ ť¨˙˘ź«˙¤ ¬˙¦ŁŻ˙¨Ą±˙«¦˛˙®©µ˙´°Ľ˙¶˛
+                    </code><span class="kvač">&laquo;</span> kraj odlomka <span class="kvač"> &#124; </span> odlomak <span class="kvač">&raquo;</span><code>
+                        ˝˙µ°»˙®¨˛˙Ž‰‰˙31t˙99˙„Ź˙ź›ź˙Ą ¦˙§Ł§˙©Ą¬˙§Ł®˙Ť‹¨˙QPŹ˙EA˙@?ś˙}˙USŹ˙;:‰˙‡˙¨¤«˙hez˙88©˙55¦˙VUľ˙PK`č!Da‡‚ŞÓÎĚ˙Â˝»˙ÂľĽ˙Äż˝˙ÁĽ»˙Äľ˝˙ÂĽ»˙żş¸˙˝¸¶˙˝·µ˙»µł˙¸´±˙·˛Ż˙¶°®˙µŻ­˙ł®¬˙˛­Ş˙°¬Ą˙Łž”˙^\n˙%%Ł˙LJs˙Ś‡x˙˘ś™˙¦ ž˙¨˘ˇ˙¦ˇź˙¤ž›˙“ŤŽ˙ysz˙UP}˙=™˙fc\˙ROi˙//‰˙HFS˙QP`˙**w˙EEË˙BA‡˙@@»˙_[€˙<91heaaąăľľ˙xqq˙haa˙ ››˙¸˛˛˙ł­­˙±««˙ż©©˙ż©©˙­¨¨˙¬¦¦˙¬¦¦˙«ąą˙¨˘ˇ˙§ˇś˙ˇš•˙ž‹˙c^}˙ />-u˙Š˙ž˙-,l˙CAX˙a]k˙{ux˙Š˙Ž‰˙‡˙}w‚˙~x~˙^X‚˙˙"P˙]˙˙}˙ ˙LLÚ˙:9˙K˙..»˙]ZŚ˙1-%aWTTŠĂ˝˝˙~~˙gaa˙±¬¬˙¸˛˛˙¶°°˙´®®˙ł¬¬˙˛¬¬˙˛««˙Ż©©˙«Ą¤˙­§Ł˙ŁžŁ˙Š†¦˙lj§˙YYŞ˙HFŁ˙°ŻÝ˙ŽŤż˙”˙VVť˙˙aaŠ˙QP˙98t˙:9j˙HFt˙FDj˙XSx˙KHk˙)(…˙«˙š˙+*ś˙VS˙miĄ˙][˙!u˙-,»˙hfş˙kfm˙dKHHrÄľľ˙ÂĽĽ˙ĹŔŔ˙»µµ˙ąłł˙¸±±˙¶±±˙µŻŻ˙¶°°˙˛¬Ş˙˛¬Ş˙˝·»˙žš˝˙’‘Ĺ˙ś›Ć˙¬©Ŕ˙Ş¦´˙Ąź˘˙°Ş˙ZVt˙
+                    </code><span class="kvač">&laquo;</span> kraj odlomka <span class="kvač"> &#124; </span> odlomak <span class="kvač">&raquo;</span><code>
+                        ›˙;;Đ˙QPŔ˙ki¤˙OO‡˙~˙)(~˙20z˙54s˙[V{˙-+{˙›˙0/ ˙20~˙('‰˙d_f˙rmb˙DA^˙//ľ˙fcś˙„}t˙LIS˙2°;99\Ă˝˝˙Ŕşş˙Ľ¶¶˙»´´˙ąłł˙¸˛˛˙ął˛˙µ°Ż˙ˇśˇ˙¤žŞ˙ŔĽĘ˙­¨ľ˙”Ź¨˙˛¬­˙°Ş¤˙¬¦˘˙ˇ›š˙nj}˙-,y˙"" ˙HG«˙kh™˙DC¸˙GF˘˙65 ˙;ş˙A@ˇ˙::–˙@?°˙TRą˙''ť˙0.¤˙ni„˙o˙{˙x˙#"n˙~˙((«˙/-L˙>;C˙%#P˙SĹ&%%Fľ¸¸ţÄľľ˙ľ¸¸˙Ľ¶¶˙»¶¶˙˝¸¶˙­§«˙—’Ą˙ČĆÔ˙ÝŰă˙ÂĽż˙®¨§˙˛¬¨˙Ż¨¨˙°ŞŞ˙­§ ˙hd…˙‹˙87ł˙SQ¸˙]Zź˙OM›˙@?ş˙45ż˙11·˙;«˙SQ‰˙TRŽ˙DDĽ˙<;¦˙ź˙ig¬˙şµ˛˙..›˙›˙“˙dd·˙ = =Ő˙((˝˙87±˙ = =“˙**—˙Bz1ą˛˛ôćŕŕ˙żąą˙ľ¸¸˙ŕą¸˙¦ ¨˙ť«˙ňńö˙íęč˙·˛°˙°ş©˙µ®®˙ł­­˙˛¬¬˙˛¬¦˙fb‰˙('˙†§˙©¤¨˙ąź˘˙ˇ›˘˙™“ ˙’ťł˙}ył˙qp«˙ />/Č˙KJˇ˙JJ±˙44 ˙Ł˙=;˛˙‚~Ź˙Š„z˙.-Ž˙99Ľ˙-,‘˙ˇ˙GF¨˙PM˙BA ˙MLŻ˙33‘˙*T­¨¨ćČÂÂ˙Á»»˙ÄľĽ˙š”Ł˙Łś¬˙÷öů˙ŰŮŘ˙Ż©©˙·±±˙·±±˙¶ŻŻ˙´®®˙·°­˙‹…ś˙MJ”˙‹†ź˙Ş¤¤˙±«¨˙®¨¦˙­§Ą˙®§Ł˙Ż© ˙±Şž˙¨˘™˙PO°˙>>Ç˙ť˙)(š˙qnĄ˙ť—•˙š”˙KHn˙##ł˙>>°˙a^Ł˙66É˙FD}˙upc˙,,”˙™˙x˙'c		ź™™ÖĚĆĆ˙˝·ą˙¦ˇ¬˙“Žˇ˙čâá˙ŢŮŘ˙ł­­˙Ľ¶¶˙»µµ˙şłł˙·±±˙¶°°˙´ŻŻ˙‡‚Ł˙ť–¤˙ˇ›˘˙¶°«˙±«§˙¦  ˙–‘™˙~zŹ˙lg˙kg‰˙xs‡˙\Y˙¸˙URŞ˙Łťź˙©Ł™˙ ›”˙zts˙+*”˙AAĹ˙::Ç˙MLľ˙EDÁ˙==ş˙\Z’˙*)›˙Ž˙
+                    </code><span class="kvač">&laquo;</span> kraj odlomka <span class="kvač"> &#124; </span> mali naslov <span class="kvač">&raquo;</span><code>
+                        –˙*K’ŚŚÄŃĘÉ˙¸˛¶˙§ ­˙˝·ş˙ČĂĂ˙Ľ¶¶˙ľ¸¸˙Ŕş¸
+                    </code><span class="kvač">&laquo;</span> kraj malog naslova <span class="kvač"> &#124; </span> odlomak <span class="kvač">&raquo;</span><code>
+                        ˙şł´˙ł­Ż˙µ°Ż˙µ°®˙˛­¬˙©¤¨˙~–˙‹†™˙zu˙d`˙PMz˙NKy˙^Z˙ql†˙{v‰˙kgw˙˙'&«˙vq‰˙”ŽŠ˙‹‡…˙db{˙A?Ť˙LL¸˙LLČ˙++¨˙21Š˙)(—˙""˘˙BA‹˙€˙+*Ż˙$$Ë…­ŃËË˙ĆŔż˙ČĂÁ˙ˇ››˙şµµ˙ÂĽĽ˙ął¶˙źš«˙‡‚ź˙vr—˙zv—˙so“˙nj˙b^Ś˙c`Ž˙vr“˙UQ€˙!‡˙31“˙B@•˙FDŽ˙EB†˙KHŽ˙21›˙65ł˙™”Ą˙jf˙&&o˙˙=˙ol§˙mj˛˙jg•˙y˙"!’˙%%Ą˙$$¨˙‡˙33»˙rpľ˙748kvrr–ŃËË˙ĘĂĂ˙˛¬¬˙…˙ÇÁÁ˙ÂĽĽ˙¶°¶˙Ż«ł˙¶±µ˙ş´µ˙°Ş°˙¨Ł¬˙ŞĄ­˙´Ż°˙»µ¬˙®¨ˇ˙YVŻ˙‰ŕ˙ËĘć˙˝»×˙ŻŻÓ˙“Ń˙…á˙›—ŕ˙§Ł¨˙Ş¤™˙_[z˙MLĄ˙VT–˙TQ}˙€{‡˙’Ś‘˙]Yr˙
+                    </code><span class="kvač">&laquo;</span> kraj odlomka <span class="kvač"> &#124; </span> odlomak <span class="kvač">&raquo;</span><code>
+                        ˙''°˙67ľ˙))}˙%%ś˙_^®˙Ž˙1/,Tdaa~ŇĚĚ˙ĎÉÉ˙—‘‘˙˙ÎČČ˙ÁĽĽ˙Ă˝Ľ˙Â˝Ľ˙Ŕşş˙ľ¸¸˙ľ¸·˙ľ·¶˙ľ·´˙±«±˙tp¨˙`_Ć˙ŽŚË˙ĹŔ¸˙µŻ©˙Ż¨Ł˙±ŞĄ˙ą˛©˙ÍĆ»˙ďęŕ˙ĆŔľ˙‡‚}˙32˙„Ł˙ł­ ˙miŽ˙=:z˙MJp˙$#˙A@˘˙++©˙US¤˙,+›˙¬˙ROq˙Šü(!">PMMgŇĚĚ˙ŇËË˙Ž‰‰˙‘ŚŚ˙ĎÉÉ˙Ă˝˝˙ÁĽĽ˙Ŕ»»˙Ŕşş˙żşş˙˝¸¸˙˝··˙ľ·¶˙©¤±˙źšż˙ÍÉÓ˙·±«˙ł­¬˙ł­®˙ł­­˙˛¬¬˙°ŞŞ˙Ş¤¤˙±«Ş˙ˇťš˙qmu˙1/Ź˙ť—›˙ź™ž˙”Ž™˙ˇ›ž˙fd‹˙™˙;:s˙..ž˙A?˙**ž˙''ş˙64…˙…{ň*B@@OÎČČ˙ÓÍÍ˙›••˙ŹŠŠ˙ŃËË˙Ĺżż˙Äľľ˙Â˝˝˙ÂĽĽ˙Ŕ»»˙ľąą˙˝¸¸˙Ľ¶¶˙ĂĽ»˙ŹŠ„˙¬¦¤˙ął´˙µ°°˙´ŻŻ˙ł®®˙˛¬¬˙ł­«˙±«¦˙Ž‰‹˙PLH˙VS]˙FC˙š”—˙Ź‰™˙¦ ˇ˙­§˘˙‡‚˙75‹˙Ź‹’˙JHŤ˙tpŚ˙1.m˙33¶˙<;ž˙vruä 7448éââűňěě˙¶±±˙„˙óíí˙ćáá˙ĺŕŕ˙ĺżż˙ăľľ˙âľľ˙ŕ»»˙ľąą˙˝¸¸˙âľľ˙ś˙¦ˇˇ˙»µµ˙·±±˙µ°°˙´®®˙´®­˙łť¦˙a]’˙?>˙&#^˙TQu˙FE˘˙ŹŠ•˙¨˘Ł˙«ĄŁ˙§ ™˙JG‡˙vq•˙¬§›˙SQ…˙~y‡˙1/j˙++°˙‡‚“˙MJŕ
+                    </code><span class="kvač">&laquo;</span> kraj odlomka
+                </div>
+            </section>
+            <section>
+                <p class="središnji" style="margin: 20% 0; font-size: 1.5em; letter-spacing: .2em;"><span class="masni crveni">H</span>yper<span class="masni crveni">T</span>ext<span class="crveni"><span class="masni">M</span>arkup<span class="masni">L</span>anguage</span>
+                </p>
+                <h2><code>&lt;</code>stvar<code>&gt;</code>...<code>&lt;/</code>stvar<code>&gt;</code></h2>
+                <br>
+                <p>
+                    <code>&lt;</code>veliki<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        ...<code>&lt;</code>mali<code>&gt;</code>...<code>&lt;/</code>mali<code>&gt;</code>...
+                    </div>
+                    <code>&lt;/</code>veliki<code>&gt;</code>
+                </p>
+            </section>
+            <section>
+                <h4><span class="krepak">semantički</span> HTML</h4>
+                <br />
+                <br />
+                <div id="htmlDokument" style="padding: 1em; height: 80%; overflow: auto;">
+                    <code>&lt;!doctype</code> html<code>&gt;</code><br><br>
+                    <code>&lt;</code>html<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        <div>
+                            <code>&lt;</code>head<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+
+                                <code>&lt;</code>title<code>&gt;</code>...<code>&lt;/</code>title<code>&gt;</code><br>
+                                <code>&lt;</code>meta ... /<code>&gt;</code><br>
+                                <code>&lt;</code>link ... /<code>&gt;</code><br>
+                                <code>&lt;</code>style<code>&gt;</code>...<code>&lt;/</code>style<code>&gt;</code>
+
+                            </div>
+                            <code>&lt;/</code>head<code>&gt;</code>
+                        </div>
+                        <div>
+                            <code>&lt;</code>body<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+
+                                <code>&lt;</code>h1<code>&gt;</code>Moja prva web stranica<code>&lt;/</code>h1<code>&gt;</code>
+                                <br />
+                                <p>
+                                    <code>&lt;</code>p<code>&gt;</code>
+                                    <div style="margin-left: 1em;">
+                                        Nekakav tekst ide <code>&lt;</code>em<code>&gt;</code><i>ovdje</i><code>&lt;/</code>em<code>&gt;</code>...
+                                    </div>
+                                    <code>&lt;/</code>p<code>&gt;</code>
+                                    <br />
+                                    <code>&lt;</code>p<code>&gt;</code>
+                                    <div style="margin-left: 1em;">
+                                        Nekakav drugi tekst ide <code>&lt;</code>em<code>&gt;</code><i>ovdje</i><code>&lt;/</code>em<code>&gt;</code>...
+                                    </div>
+                                    <code>&lt;/</code>p<code>&gt;</code>
+                                    <br />
+                                    <code>&lt;</code>section <span class="crveni">class="</span>popratni-sadržaj<span class="crveni">"</span><code>&gt;</code>
+                                    <div style="margin-left: 1em;">
+                                        <code>&lt;</code>p<code>&gt;</code>
+                                        <div style="margin-left: 1em;">
+                                            Nekakav treći tekst ide <code>&lt;</code>strong<code>&gt;</code><b>ovdje</b><code>&lt;/</code>strong<code>&gt;</code>...
+                                        </div>
+                                        <code>&lt;/</code>p<code>&gt;</code>
+                                    </div>
+                                    <code>&lt;/</code>section<code>&gt;</code>
+                                </p>
+                            </div>
+                            <code>&lt;/</code>body<code>&gt;</code>
+                        </div>
+                    </div>
+                    <code>&lt;/</code>html<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>block i in-line elementi</h4><br><br>
+                <!-- <hr style="border: 2px solid #ec0; margin: 1em 0 .5em; width: 100%; clear: both;" /> -->
+                <ul class="dvojna-lista" style="margin: 0 1em; height: auto;">
+                    <li>html, head, body</li>
+                </ul>
+                <ul class="dvojna-lista" style="margin: 0 1em; height: auto;">
+                    <li>doctype, meta, link, script</li>
+                </ul>
+                <hr style="border: 2px solid #ec0; margin: 1em 0 .5em; width: 100%; clear: both;" />
+                <ul class="dvojna-lista" style="margin-top: 0; height: 70%; overflow: auto; list-style-type: square;">
+                    <li>header, footer, main, aside</li>
+                    <li>nav, menu, menuitem</li>
+                    <li>section, article</li>
+                    <hr />
+                    <li>h1, h2, h3... h6</li>
+                    <li>p, blockquote, details, summary</li>
+                    <li>ul, ol, li</li>
+                    <li>table, thead, tfoot, colgroup, col, tr, td, caption</li>
+                    <li>figure, figcaption, img, audio, track, video, source, canvas, applet, embed, iframe</li>
+                    <li>form, input, label, optgroup, option, select, textarea, datalist, button</li>
+                    <hr />
+                    <li class="crveni">div</li>
+                </ul>
+                <ul class="dvojna-lista" style="margin-top: 0; height: 70%; overflow: auto; list-style-type: disc;">
+                    <li>em, strong, cite, mark</li>
+                    <li>b, i, u, s, </li>
+                    <li>sup, sub, small</li>
+                    <li>del, pre, var, samp, code</li>
+                    <li>abbr, acronym</li>
+                    <li>a</li>
+                    <hr />
+                    <li class="crveni">span</li>
+                </ul>
+            </section>
+            <section>
+                <h4>osnovne semantičke oznake</h4>
+                <br>
+                <div id="osnovniHTML">
+                    <div>
+                        <h5>block</h5>
+                        <dl>
+                            <dt>header</dt>
+                            <dd>oznaka za zaglavlje stranice</dd>
+                            <dt>footer</dt>
+                            <dd>oznaka za podnožje stranice</dd>
+                            <dt>main</dt>
+                            <dd>oznaka za glavni sadržaj stranice</dd>
+                            <dt>aside</dt>
+                            <dd>oznaka za popratne informacije</dd>
+                            <dt>article</dt>
+                            <dd>oznaka za članak u sadržaju</dd>
+                            <dt>section</dt>
+                            <dd>oznaka za odjeljak sadržaja</dd>
+                            <dt>h1&mdash;6</dt>
+                            <dd>[heading] oznake za naslove u različitim stupnjevima</dd>
+                            <dt>p</dt>
+                            <dd>[paragraph] oznaka za odlomak</dd>
+                            <dt>ul, ol, dl</dt>
+                            <dd>[unordered, ordered i definition list] oznake za razne vrste popisa</dd>
+                            <dt>li, dt, dd</dt>
+                            <dd>[list item, definition term, definition] oznake za stavke popisa</dd>
+                            <dt style="color: #ec0">div</dt>
+                            <dd>[division] oznaka za neodređeni odjeljak sadržaja</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <h5>in-line</h5>
+                        <dl>
+                            <dt>em</dt>
+                            <dd>[emphasis] oznaka za istaknuti tekst; ne miješati sa <b>i</b></dd>
+                            <dt>strong</dt>
+                            <dd>oznaka za ključne riječi u tekstu; ne miješati sa <b>b</b></dd>
+                            <dt>del</dt>
+                            <dd>[deleted] oznaka za izbačeni tekst; ne miješati sa <b>s</b></dd>
+                            <dt>ins</dt>
+                            <dd>[inserted] oznaka za ubačeni tekst; ne miješati sa <b>u</b></dd>
+                            <dt>mark</dt>
+                            <dd>oznaka za istaknuti tekst</dd>
+                            <dt>time</dt>
+                            <dd>oznaka za dio teksta koji se odnosi na vrijeme</dd>
+                            <dt>cite</dt>
+                            <dd>[citation] oznaka za citirani dio teksta</dd>
+                            <dt>small</dt>
+                            <dd>oznaka za manje bitan dio teksta</dd>
+                            <dt>sup</dt>
+                            <dd>oznaka za superscript</dd>
+                            <dt>sub</dt>
+                            <dd>oznaka za subscript</dd>
+                            <dt style="color: #ec0">span</dt>
+                            <dd>neodređena oznaka za neku duljinu teksta</dd>
+                        </dl>
+                    </div>
+                    <br style="clear: both;">
+                </div>
+            </section>
+            <section>
+                <h4>HTML kod</h4>
+                <figure style="height: 100%;">
+                    <div style="height: 70%; overflow: auto;">
+                        <img src="materijali/vj3/ovaj-html.png" />
+                    </div><br>
+                    <figcaption>Primjer HTML koda</figcaption>
+                </figure>
+            </section>
+             <section>
+                <p class="središnji" style="margin: 20% 0; font-size: 1.5em; letter-spacing: .2em;"><span class="masni crveni">H</span>yper<span class="masni crveni">T</span>ext<span class="crveni"><span class="masni">M</span>arkup<span class="masni">L</span>anguage</span>
+                </p>
+                <h2><code>&lt;</code>stvar<code>&gt;</code>...<code>&lt;/</code>stvar<code>&gt;</code></h2>
+                <br>
+                <p>
+                    <code>&lt;</code>veliki<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        ...<code>&lt;</code>mali<code>&gt;</code>...<code>&lt;/</code>mali<code>&gt;</code>...
+                    </div>
+                    <code>&lt;/</code>veliki<code>&gt;</code>
+                </p>
+            </section>
+            <section>
+                <h4>DOM</h4>
+                <img src="materijali/vj4/DOM.png" style="height: 100%;">
+            </section>
+            <section>
+                <h4>HTML liste</h4>
+                <br>
+                <p>
+                    <code>&lt;</code>ul<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        <code>&lt;</code>li<code>&gt;</code>...<code>&lt;/</code>li<code>&gt;</code><br>
+                        <code>&lt;</code>li<code>&gt;</code>...<code>&lt;/</code>li<code>&gt;</code><br> ...
+                    </div>
+                    <code>&lt;/</code>ul<code>&gt;</code>
+                </p><br>
+                <p>
+                    <code>&lt;</code>ol<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        <code>&lt;</code>li<code>&gt;</code>...<code>&lt;/</code>li<code>&gt;</code><br>
+                        <code>&lt;</code>li<code>&gt;</code>...<code>&lt;/</code>li<code>&gt;</code><br> ...
+                    </div>
+                    <code>&lt;/</code>ol<code>&gt;</code>
+                </p><br>
+                <p>
+                    <code>&lt;</code>dl<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        <code>&lt;</code>dt<code>&gt;</code>...<small style="color: #bbb">/pojam/</small>...<code>&lt;/</code>dt<code>&gt;</code><br>
+                        <code>&lt;</code>dd<code>&gt;</code>...<small style="color: #bbb">/definicija/</small>...<code>&lt;/</code>dd<code>&gt;</code><br>
+                        <code>&lt;</code>dt<code>&gt;</code>...<small style="color: #bbb">/pojam/</small>...<code>&lt;/</code>dt<code>&gt;</code><br>
+                        <code>&lt;</code>dd<code>&gt;</code>...<small style="color: #bbb">/definicija/</small>...<code>&lt;/</code>dd<code>&gt;</code><br> ...
+                    </div>
+                    <code>&lt;/</code>dl<code>&gt;</code>
+                </p>
+
+            </section>
+            <section>
+                <h4>HTML tablice</h4>
+
+                <div style="margin-top: 1em; height: 100%; overflow: auto;">
+                    <code>&lt;</code>table<code>&gt;</code>
+                    <div style="margin-left: 1em; color: #bbb; font-size: .75em;">
+                        <code>&lt;</code>thead<code>&gt;</code>
+                        <div style="margin-left: 1em;">
+                            <code>&lt;</code>tr<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+                                <code>&lt;</code>th<code>&gt;</code>...<code>&lt;/</code>th<code>&gt;</code><br>
+                                <code>&lt;</code>th<code>&gt;</code>...<code>&lt;/</code>th<code>&gt;</code><br> ...
+                            </div>
+                            <code>&lt;/</code>tr<code>&gt;</code>
+                        </div>
+                        <code>&lt;/</code>thead<code>&gt;</code><br>
+
+                        <code>&lt;/</code>tbody<code>&gt;</code>
+                        <div style="margin-left: 1em; color: #000; font-size: 1.2em;">
+                            <code>&lt;</code>tr<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+                                <code>&lt;</code>td<code>&gt;</code>...<code>&lt;/</code>td<code>&gt;</code>
+                            </div>
+                            <code>&lt;/</code>tr<code>&gt;</code><br>
+                            <code>&lt;</code>tr<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+                                <code>&lt;</code>td<code>&gt;</code>...<code>&lt;/</code>td<code>&gt;</code>
+                            </div>
+                            <code>&lt;/</code>tr<code>&gt;</code><br>
+                            <code>&lt;</code>tr<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+                                <code>&lt;</code>td<code>&gt;</code>...<code>&lt;/</code>td<code>&gt;</code>
+                            </div>
+                            <code>&lt;/</code>tr<code>&gt;</code><br>...
+                        </div>
+                        <code>&lt;/</code>tbody<code>&gt;</code><br>
+
+                        <code>&lt;</code>tfoot<code>&gt;</code>
+                        <div style="margin-left: 1em;">
+                            <code>&lt;</code>tr<code>&gt;</code>
+                            <div style="margin-left: 1em;">
+                                <code>&lt;</code>td<code>&gt;</code>...<code>&lt;/</code>td<code>&gt;</code>
+                            </div>
+                            <code>&lt;/</code>tr<code>&gt;</code>
+                        </div>
+                        <code>&lt;/</code>tfoot<code>&gt;</code><br>
+                    </div>
+                    <code>&lt;/</code>table<code>&gt;</code><br>
+                </div>
+            </section>
+            <section>
+                <h4>HTML atributi</h4>
+                <br />
+                <br /><br />
+                <p class="središnji">
+                    <code>&lt;</code>stvar <span class="crveni"> class="vrsta-stvari"</span><code>&gt;</code>...<code>&lt;/</code>stvar<code>&gt;</code><br /><br />
+                    <code>&lt;</code>stvar <span class="crveni"> id="točnoTaStvar"</span><code>&gt;</code>...<code>&lt;/</code>stvar<code>&gt;</code><br /><br /><br />
+                </p>
+                <br /><br /><br /><br /><br />
+                <p>
+                    <span class="zrno">&raquo;</span><span class="krepak"><a class="cb" href="https://www.w3.org/standards/webdesign/htmlcss">www.w3c.org</a></span>
+                </p>
+                <p>
+                    <span class="zrno">&raquo;</span><span class="krepak"><a class="cb" href="http://www.w3schools.com/tags/default.asp">www.w3schools.com</a></span>
+                </p>
+            </section>
+            <section>
+                <h3 class="kardinal">Zadatak <span class="brojćek">2</span></h3>
+                <p>(HTML označivanje semantičkih cjelina u sadržaju)</p>
+            </section>
+            <section>
+                <p class="zatvor">Kraj vježbe 2</p>
+            </section>
+        </article>
+        <!-- **************************************************** -->
+        <article id="vježba3">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>HTML elementi sa dodatnom funkcionalnošću</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 3</span>
+                </h1>
+            </section>
+            <section>
+                <h4>HTML atributi</h4>
+                <p class="središnji" style="margin: 20% 0; font-size: 1.5em; letter-spacing: .2em;">
+                    <span class="masni crveni">H</span>yper<span class="masni crveni">T</span>ext<span class="crveni"><span class="masni">M</span>arkup<span class="masni">L</span>anguage</span>
+                </p>
+                <br>
+                <h2>
+                    <code>&lt;</code>stvar <code>atribut="</code><em>vrijednost</em><code>"&gt;</code>...sadržaj...<code>&lt;/</code>stvar<code>&gt;</code>
+                </h2>
+                <br>
+            </section>
+            <section>
+                <h4>Elementi za integraciju sadržaja</h4>
+                <br>
+                <br>
+                <p>
+                    <code>&lt;</code>a <code>href="</code><em>adresa</em><code>" target="</code><em>element</em><code>"&gt;</code>Poveznica<code>&lt;/</code>a<code>&gt;</code>
+                </p>
+                <br>
+                <hr style="border: 2px solid #ec0; margin: 1em 0 .5em; width: 100%; clear: both;" />
+                <br>
+                <br>
+                <p>
+                    <code>&lt;</code>embed <code>src="</code><em>datoteka</em><code>"&gt;</code>
+                </p>
+                <br>
+                <p>
+                    <code>&lt;</code>object <code>data="</code><em>datoteka</em><code>"&gt;</code>
+                </p>
+                <br>
+                <p>
+                    <code>&lt;</code>iframe <code>src="</code><em>datoteka</em><code>" seamless&gt;</code>
+                </p>
+                <br>
+            </section>
+            <section>
+                <h4>Elementi za integraciju multimedijskog sadržaja</h4>
+                <br>
+                <br>
+                <p>
+                    <code>&lt;</code>element <code>src="</code><em>adresa</em><code>"&gt;</code>
+                </p>
+                <br>
+                <p>
+                    <code>&lt;</code>element<code>&gt;</code>
+                    <div style="margin-left: 1em;">
+                        <code>&lt;</code>source <code>src="</code><em>adresa</em><code>" type="</code><em>kod</em><code>"&gt;</code>
+                        <br>
+                        <code>&lt;</code>source <code>src="</code><em>adresa</em><code>" type="</code><em>kod</em><code>"&gt;</code>
+                        <br> ...
+                    </div>
+                    <code>&lt;/</code>element<code>&gt;</code>
+                </p>
+                <br>
+                <hr style="border: 2px solid #ec0; margin: 1em 0 .5em; width: 100%; clear: both;" />
+                <br>
+                <br>
+                <p>
+                    <code>&lt;</code>img <code>src="</code><em>datoteka</em><code>" alt="</code><em>zamjenski tekst</em><code>"&gt;</code>
+                </p>
+                <br>
+                <p>
+                    <code>&lt;</code>picture <code>alt="</code><em>zamjenski tekst</em><code>"&gt;</code>
+                </p>
+                <br>
+                <p>
+                    <code>&lt;</code>audio <code>alt="</code><em>zamjenski tekst</em><code>"&gt;</code>
+                </p>
+                <br>
+                <p>
+                    <code>&lt;</code>video <code>alt="</code><em>zamjenski tekst</em><code>"&gt;</code>
+                </p>
+                <br>
+
+            </section>
+            <section>
+                <h4>Elementi za unos podataka</h4>
+                <br>
+                <br>
+                <p>
+                    <code>&lt;</code>form <code>action="</code><em>funkcija</em><code>"&gt;</code>
+                    <div style="margin: 1em; height: 75%; width: 100%; overflow: auto;">
+                        <code>&lt;</code>label <code>for="</code><em>id</em><code>"&gt;</code>...oznaka... <code>&lt;/</code>label<code>&gt;</code>
+
+                        <br><br>
+
+                        <code>&lt;</code>input <code>type="</code><em>text/number/radio/checkbox/date/email/color/range/reset/submit</em><code>" name="</code><em>ime</em><code>" </code><code style="color: #bbb;">id="<em>id</em>" list="<em>ime_liste</em>" value="<em>nulta-vrijednost</em>" placeholder="<em>predložak</em>"</code><code>&gt;</code>
+
+                        <br><br>
+
+                        <code>&lt;</code>select <code>name="</code><em>ime</em><code>"&gt;</code>
+                        <div style="margin-left: 1em;">
+                            <code>&lt;</code>option <code>value="</code><em>vrijednost</em><code>"&gt;</code><code style="color: #bbb;">...predložak...&lt;/option&gt;</code><br>
+                            <code>&lt;</code>option <code>value="</code><em>vrijednost</em><code>"&gt;</code><code style="color: #bbb;">...predložak...&lt;/option&gt;</code><br>
+                            <code>&lt;</code>option <code>value="</code><em>vrijednost</em><code>"&gt;</code><code style="color: #bbb;">...predložak...&lt;/option&gt;</code><br> ...
+                        </div>
+                        <code>&lt;/</code>select<code>&gt;</code>
+
+                        <br><br>
+
+                        <code>&lt;</code>textarea <code>name="</code><em>ime</em><code>" </code><code style="color: #bbb;">value="<em>nulta-vrijednost</em>" placeholder="<em>predložak</em>"</code><code>&gt;</code><code style="color: #bbb;">...predložak...&lt;/textarea&gt;</code><br>
+
+                        <br><br>
+
+                        <code>&lt;</code>datalist <code>id="</code><em>ime_liste</em><code>"&gt;</code>
+                        <div style="margin-left: 1em;">
+                            <code>&lt;</code>option <code>value="</code><em>vrijednost</em><code>"&gt;</code><code style="color: #bbb;">...predložak...&lt;/option&gt;</code><br>
+                            <code>&lt;</code>option <code>value="</code><em>vrijednost</em><code>"&gt;</code><code style="color: #bbb;">...predložak...&lt;/option&gt;</code><br>
+                            <code>&lt;</code>option <code>value="</code><em>vrijednost</em><code>"&gt;</code><code style="color: #bbb;">...predložak...&lt;/option&gt;</code><br> ...
+                        </div>
+                        <code>&lt;/</code>datalist<code>&gt;</code>
+
+
+                    </div>
+                    <code>&lt;/</code>form<code>&gt;</code>
+                </p>
+                <br>
+
+            </section>
+            <section>
+                <h3 class="kardinal">Zadatak <span class="brojćek">4</span></h3>
+                <p>(HTML klase, identiteti i složeni elementi, folmular, poveznice i multimedia)</p>
+            </section>
+            <section>
+                <p class="zatvor">Kraj vježbe 3</p>
+            </section>
+        </article>
+
+        <!-- *********************************************************************************************************************** -->
+        <article id="vježba4">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>CSS</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 4</span>
+                </h1>
+            </section>
+            <section>
+                <p class="središnji" style="margin-top: 20%; font-size: 1.5em; letter-spacing: .2em;">
+                    <span class="masni crveni">C</span>ascading
+                    <span class="crveni">
+                        <span class="masni">S</span>tyle
+                    <span class="masni">S</span>heets</span>
+                </p>
+            </section>
+            <section>
+                <h4>umetanje
+                    <span class="krepak">i</span> gaženje</h4>
+                <br />
+                <br />
+                <ol>
+                    <li>
+                        <code>&lt;</code>style<code>&gt;</code>
+                    </li>
+                    <li>
+                        <code>&lt;</code>link <code>rel="</code>stylesheet<code>"&gt;</code>
+                    </li>
+                    <li>
+                        <code>style="</code>...<code>"</code>
+                    </li>
+                    <li>
+                        <code>@import url(</code>stylesheet<code>);</code>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h4>sintaksa</h4>
+                <br />
+                <br />
+                <div style="margin-left: 1.5em;">
+                    <p>
+                        <b>stvar</b>
+                        <span class="crveni">{</span>
+                        <br />
+                        <div style="margin-left: 1em;">
+                            <b>prvo-svojstvo</b><span class="crveni">: </span>vrijednost<span class="crveni">;</span>
+                            <br />
+                            <b>drugi-svojstvo</b><span class="crveni">: </span>vrijednost<span class="crveni">;</span>
+                            <br /> ...
+                        </div>
+                        <span class="crveni">}</span>
+                    </p>
+                </div>
+                <br />
+                <div class="tabla">
+                    <h4>
+                        <a class="cb" href="http://www.w3schools.com/cssref/css_selectors.asp">selektori
+                            <span class="krepak">i</span> specifičnost</a>
+                    </h4>
+                    <ol>
+                        <li>bez selektora <span class="flah">/$1000</span></li>
+                        <li>atribut (<code>#</code>, <code>.</code>, <code>[</code>atribut<code>]</code>) <span class="flah">/$100 ili $10</span></li>
+                        <li>element (
+                            <i>ime</i>, <code>*</code>) <span class="flah">/$1</span></li>
+                        <hr />
+                        <li>relacijski (<code>+</code>, <code>&#126;</code>, <code>&gt;</code>)</li>
+                        <li>pseudo (<code>:</code>, <code>::</code>)</li>
+                    </ol>
+                </div>
+                <div class="tabla">
+                    <h4>
+                        <a class="cb" href="http://www.w3schools.com/cssref/default.asp">svojsva
+                            <span class="krepak">i</span> nasljeđivanje</a>
+                    </h4>
+                    <ol>
+                        <li>oblik (display, width, height, margin, padding, transform /scale/)</li>
+                        <li>položaj (position, top, right, bottom, left, float, transform /translate, scale, rotate, skew, matrix/, z-index)</li>
+                        <li>izgled (border-, background-, overflow)</li>
+                        <li><i>tipografija</i> (font-, text-, letter-, word-, line-)</li>
+                    </ol>
+                </div>
+            </section>
+            <section>
+                <h4><a href="http://www.w3schools.com/cssref/default.asp#text" class="cb">tipografska CSS svojstva</a></h4>
+                <ul class="dvojna-lista" style="list-style: none; margin-top: 3em;">
+                    <li><code><strong>font-</strong></code></li>
+                    <li style="padding-left: 1em;">family</li>
+                    <li style="padding-left: 1em;">weight</li>
+                    <li style="padding-left: 1em;">style</li>
+                    <li style="padding-left: 1em;">size</li>
+                    <li style="padding-left: 1em;">variant</li>
+                    <hr />
+                    <li><strong>color</strong></li>
+                </ul>
+
+                <ul class="dvojna-lista" style="list-style: none;  margin-top: 3em;">
+                    <li><code><strong>text-</strong></code></li>
+                    <li style="padding-left: 1em;">align</li>
+                    <li style="padding-left: 1em;">indent</li>
+                    <li style="padding-left: 1em;">transform</li>
+                    <li style="padding-left: 1em;">decoration</li>
+                    <li style="padding-left: 1em;">shadow</li>
+                    <li style="padding-left: 1em;">overflow</li>
+                    <hr />
+                    <li><strong>line-</strong>height</li>
+                    <li><strong>word-</strong>spacing</li>
+                    <li><strong>letter-</strong>spacing</li>
+                </ul>
+            </section>
+            <section>
+                <h4>definiranje pisama</h4>
+                <br><br>
+                <p>
+                    <i>selektor</i> <code>{</code>
+                    <div class="uvlaka">
+                        <code>font-family: "</code><i>ime</i><code>",</code> <i>rezerva</i><code>,</code> <i>tip pisma</i><code>;</code><br>
+                        <code>font-weight: </code><i>debljina</i><code>;</code> <span class="flah">/ normal, bold, 100&mdash;900</span><br>
+                        <code>font-style: </code><i>stil</i><code>;</code> <span class="flah">/ normal, italic, slanted</span><br>
+                        <code>font-variant: </code><i>abeceda oblika</i><code>;</code> <span class="flah">/ normal, smallcaps</span><br> ...
+                        <br>
+                        <code>font-size: </code><i>veličina</i><code>;</code> <span class="flah">/ <i>ključna riječ</i>, mjerna jedinica (px, pt, mm), relativna jedinica (%, x.x, em, rem, vh, vw, vmax, vmin)</span><br>
+                        <code>color: </code><i>boja</i><code>;</code><span class="flah">/ <i>ime boje</i>, #hex, <i>cfxa(x1, x2, x3, a)</i>, currentColor</span><br>
+                    </div>
+                    <code>}</code>
+                </p>
+                <br>
+                <hr>
+                <p>
+                    <code>font-family: </code> <i><a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp" class="cb">'web safe' fontovi</a></i><code>;</code>
+                </p>
+                <br>
+                <p>
+                    <code>@font-face {</code>
+                    <div style="margin-left: 1em;">
+                        <code>src: "</code><i>adresa</i><code>";</code><br>
+                        <code>font-family: "</code><i>ime</i><code>";</code><br>
+                        <code>font-weight: </code><i>debljina</i><code>;</code><br>
+                        <code>font-style: </code><i>stil</i><code>;</code><br>
+                        <code>font-variant: </code><i>abeceda oblika</i><code>;</code><br> ...
+                    </div>
+                    <code>}</code>
+                </p>
+            </section>
+            <section>
+                <h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" class="cb">CSS varijable</a></h4>
+
+                <br><br>
+                <p>
+                    <i>selektor</i> <code>{</code>
+                    <div class="uvlaka">
+                        <code>--ime-varijable: </code><i>vrijednost</i><code>;</code>
+                    </div>
+                    <code>}</code>
+                </p>
+                <br><br>
+                <p>
+                    <i>selektor</i> <i class="sivo">(dijete)</i> <code>{</code>
+                    <div class="uvlaka">
+                        <code>svojstvo: var(</code><i>--ime-varijable</i><code>);</code>
+                    </div>
+                    <code>}</code>
+                </p>
+            </section>
+            <section>
+                <h3 class="kardinal">Zadatak
+                    <span class="brojćek">4</span>
+                </h3>
+                <p>(CSS tipografsko oblikovanje)</p>
+            </section>
+            <section>
+                <p class="zatvor">Kraj vježbe 4</p>
+            </section>
+        </article>
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <article id="vježba5">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>prijelom pomoću CSS-a</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 5</span>
+                </h1>
+            </section>
+            <section>
+                <h4><em>'box model'</em> svojstva</h4>
+                <ol class="dvojna-lista" style="margin-top: 2em;">
+                    <li><strong>width</strong></li>
+                    <li><strong>height</strong></li>
+                    <li><strong>margin</strong></li>
+                    <li><strong>padding</strong></li>
+                    <li><strong>border-width</strong></li>
+                </ol>
+                <ul class="dvojna-lista" style="margin-top: 2em;">
+                    <li><strong>box-sizing</strong></li>
+                    <hr>
+                    <li style="list-style: none;">content-box</li>
+                    <li style="list-style: none;">border-box</li>
+                </ul>
+            </section>
+            <section>
+                <h4>
+                    <i>
+                        <a class="cb" href="http://www.w3schools.com/css/css_boxmodel.asp">'box model'</a>
+                    </i>
+                </h4>
+                <canvas id="boxModel"></canvas>
+            </section>
+            <section>
+                <h4>'normal document flow'</h4>
+                <ol style="margin-top: 2em;">
+                    <strong>display:</strong>
+                    <li><span class="crveni">none</span></li>
+                    <li><span class="crveni">in-line</span></li>
+                    <li><span class="crveni">block</span></li>
+                    <li>list-item</li>
+                    <li>table</li>
+                    <li>table-cell</li>
+                    <li>...</li>
+                    <li>inline-block</li>
+                    <li>run-in</li>
+                    <li class="crveni">flex</li>
+                    <li class="crveni">grid</li>
+                </ol>
+            </section>
+            <section>
+                <h4>
+                    <i>
+                        <a class="cb" href="http://www.w3schools.com/css/css_positioning.asp">'position'</a>
+                    </i>
+                    <span class="krepak">i</span>
+                    <i>
+                        <a class="cb" href="http://www.w3schools.com/css/css_float.asp">'float'</a>
+                    </i>
+                </h4>
+                <br />
+                <br />
+                <ol class="dvojna-lista" style="margin-top: 1em;">
+                    <strong>position:</strong>
+                    <li>static</li>
+                    <li>relative</li>
+                    <li>absolute</li>
+                    <li>fixed</li>
+                    <hr />
+                    <li style="list-style: none;"><strong>top</strong></li>
+                    <li style="list-style: none;"><strong>left</strong></li>
+                    <li style="list-style: none;"><strong>bottom</strong></li>
+                    <li style="list-style: none;"><strong>right</strong></li>
+                </ol>
+                <ol class="dvojna-lista" style="margin-top: 1em;">
+                    <strong>float:</strong>
+                    <li>left</li>
+                    <li>right</li>
+                    <hr />
+                    <li style="list-style: none;"><strong>clear</strong></li>
+
+                </ol>
+            </section>
+            <section>
+                <h4>flexBox</h4>
+
+                <!-- DODATI SADRŽAJA -->
+            </section>
+            <section>
+                <h4>gridContainer</h4>
+
+                <!-- DODATI SADRŽAJA -->
+            </section>
+            <section>
+                    <h3 class="kardinal">Zadatak
+                        <span class="brojćek">5</span>
+                    </h3>
+                    <p>(CSS prijelom)</p>
+                </section>
+                <section>
+                    <p class="zatvor">Kraj vježbe 8</p>
+                </section>
+        </article>
+
+        <article id="vježba6">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>CSS specifičnost, @media, animacije i transformacije</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 6</span>
+                </h1>
+            </section>
+            <section>
+                <h4>pseudo selektori</h4>
+                <ul class="dvojna-lista">
+                    <h5>Uvjeti položaja:</h5>
+                    <li>:first-child</li>
+                    <li>:first-of-type</li>
+                    <li>:last-child</li>
+                    <li>:last-of-type</li>
+                    <li>:last-of-type</li>
+                    <li>:nth-child()</li>
+                    <li>:nth-of-type()</li>
+                    <li>:not()</li>
+                    <li>:only-child</li>
+                    <li>:only-of-type</li>
+                    <li class="red"> &gt;, +, ~</li>
+                    <li class="red">::before</li>
+                    <li class="red">::after</li>
+                </ul>
+                <ul class="dvojna-lista">
+                    <h5>Uvjeti stanja:</h5>
+                    <li class="crveni">:active</li>
+                    <li>:checked</li>
+                    <li>:disabled</li>
+                    <li>:empty</li>
+                    <li>:focus</li>
+                    <li class="crveni">:hover</li>
+                    <li>:invalid</li>
+                    <li>:link</li>
+                    <li class="crveni">:target</li>
+                    <li class="crveni">:visited</li>
+                </ul>
+            </section>
+            <section>
+                <h4><a href="https://www.w3schools.com/css/css3_transitions.asp" class="cb">CSS tranzicije</a></h4>
+                <div style="margin-top: 4em;">
+                    <h5>/* stanje 1 */</h5>
+                    <p>
+                        <i>selektor</i> <code>{</code>
+                        <div class="uvlaka">
+                            <code>svojstva: </code><em>vrijednosti</em><code>;</code><br>
+                            ...<code>;</code><span class="flah"> / sve upute</span><br>
+                            <code>transition: </code><i>svojstvo</i> trajanje vremenska-funkcija odgoda<code>;</code> <span class="flah">/ dodati još uputa za koje god svojstvo i odvojiti ih zarezom</span><br>
+                        </div>
+                        <code>}</code>
+                    </p><br><br>
+                    <h5>/* stanje 2 */</h5>
+                    <p>
+                        <i>novi-selektor-za-promijenjenu-stvar</i> <code>{</code>
+                            <div class="uvlaka">
+                                <code>ista-svojstva: </code><em>nove-vrijednosti</em><code>;</code><br>
+                                ...<code>;</code><span class="flah"> / samo one promijenjene upute</span><br>
+                            </div>
+                            <code>}</code>
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <h4><a href="https://www.w3schools.com/cssref/css3_pr_animation.asp" class="cb">CSS animacije</a></h4>
+                    <div style="margin-top: 4em;">
+                        <h5>/* definicija */</h5>
+                        <p>
+                            <code>@keyframes</code> <em>ime-animacije</em> <code>{</code>
+                                <div class="uvlaka">
+                                    <code>naznaka-perioda* {</code><em> CSS upute</em><code>; }</code><br>
+                                    <code>naznaka-perioda {</code><em> CSS upute</em><code>; }</code><br>
+                                    ...<code>;</code><span class="flah"> / svi koraci</span><br>
+                                </div>
+                                <code>}</code>
+                            </p><br><br>
+                            <h5>/* primjena */</h5>
+                    <p>
+                        <i>selektor</i> <code>{</code>
+                        <div class="uvlaka">
+                            <code>svojstva: </code><em>početne-vrijednosti</em><code>;</code><br>
+                            ...<code>;</code><span class="flah"> / sve upute</span><br>
+                            <code>animation: </code><i>ime-animacije</i> trajanje vremenska-funkcija odgoda broj-ponavljanja smijer-tijeka posljedica-animacije stanje-animacije<code>;</code> <span class="flah">/ dodati još uputa za koje god svojstvo i odvojiti ih zarezom</span><br>
+                        </div>
+                        <code>}</code>
+                    </p>
+                    <br><br>
+                    <p>
+                        <small class="flah">* naznaka-perioda: <b>from</b>&mdash;<b>to</b> ili <b>0%</b>&mdash;<b>100%</b> </small>
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h4><a href="https://www.w3schools.com/cssref/css3_pr_transform.asp" class="cb">CSS transformacije</a></h4>
+                <div style="margin-top: 4em;">
+                    <p>
+                        <i>roditelj</i> <code>{</code>
+                            <div class="uvlaka">
+                                <code>perspective: </code><em> udaljenost</em><code>;</code> <span class="flah"> / promatrača od predmeta</span>
+                            </div>
+                            <code>}</code>
+                        </p><br><br>
+                    <p>
+                        <i>dijete</i> <code>{</code>
+                        <div class="uvlaka">
+                                <code>transform: scale<span class="flah">3d</span>(<span class="flah">širina</span>, <span class="flah">visina</span>, <span class="flah">?</span>) translate<span class="flah">3d</span>(<span class="flah">x</span>, <span class="flah">y</span>, <span class="flah">z</span>) rotate<span class="flah">3d</span>(<span class="flah">x-kut</span>, <span class="flah">y-kut</span>, <span class="flah">z-kut</span>) skew<span class="flah">3d</span>(<span class="flah">x-kut</span>, <span class="flah">y-kut</span>, <span class="flah">z-kut</span>) matrix<span class="flah">3d</span>(<span class="flah">...</span>);</code>
+                        </div>
+                        <code>}</code>
+                    </p>
+                </div>
+            </section>
+            <section>
+                    <h3 class="kardinal">Zadatak
+                        <span class="brojćek">6</span>
+                    </h3>
+                    <p>(CSS interakcije)</p>
+                </section>
+                <section>
+                    <p class="zatvor">Kraj vježbe 6</p>
+                </section>
+
+        </article>
+
+        <!-- <article id="vježba11">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>osnove JavaScript-a</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 11</span>
+                </h1>
+            </section>
+            <section>
+                <p class="središnji" style="margin-top: 20%; font-size: 1.5em; letter-spacing: .2em;">Java
+                    <span class="crveni">Script</span>
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span class="krepak">JS</span> varijable <span class="krepak">i</span> operatori</h4>
+                <table class="tri-stupca">
+                    <thead>
+                        <tr>
+                            <th>var</th>
+                            <th>operator</th>
+                            <th>upit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>undefined</code>
+                            </td>
+                            <td>
+                                <code>=</code> (zadaj)</td>
+                            <td>
+                                <code>if (</code>upit<code>) {</code>...<code>}</code>
+                                <br />
+                                <code>else {</code>...<code>}</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>n</code> (broj)</td>
+                            <td>
+                                <code>+</code>,
+                                <code>-</code>,
+                                <code>*</code>,
+                                <code>/</code>,
+                                <code>%</code> (aritmetički)</td>
+                            <td>
+                                upit <code>?</code> opcija1 <code>:</code> opcija2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>"</code>izraz<code>"</code> (string)</td>
+                            <td>
+                                <code>==</code>,
+                                <code>===</code>,
+                                <code>!=</code>,
+                                <code>!==</code>,
+                                <code><</code>,
+                                <code>></code>,
+                                <code>=></code>,
+                                <code>=<</code> (usporedbe)</td>
+                            <td>
+                                <code>for (</code>start<code>;</code> kraj<code>;</code> korak<code>) {</code>...<code>}</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>true</code>,
+                                <code>false</code> (boolan)</td>
+                            <td></td>
+                            <td>
+                                <code>while (</code>uvijet<code>) {</code>...<code>}</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>[</code>a<code>, </code>b<code>, </code>c<code>,</code>...<code>]</code> (array)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>{</code>a<code>:</code>x<code>, </code>b<code>:</code>y<code>, </code>c<code>:</code>z<code>,</code>...<code>}</code> (object)
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>function()</code> (radnja)
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>... bilošto ...</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section style="overflow: auto;">
+                <h4>
+                    <span class="krepak">JavaScript</span> JS</h4>
+                <br />
+                <br />
+                <code>var</code> members = <code>document.getElementById('</code>memberOrganisationsList<code>');</code>
+                <br />
+                <code>var</code> li = members<code>.getElementsByTagName('</code>LI<code>');</code>
+                <br />
+                <code>var</code> clicked, clicker, web, win, link, description, orig, wrap, l<code>;</code>
+                <br />
+                <code>for (</code> cl = 0<code>;</code> cl < li<code>.length;</code> cl<code>++) {</code>
+                    <br />
+                    <div style="margin-left: 1em;">
+                        l <code>=</code> li<code>[cl];</code>
+                        <br /> 
+                        link = l<code>.childNodes[0].cloneNode(true);</code>
+                        <br /> 
+                        orig = l<code>.childNodes[2].innerHTML;</code>
+                        <br /> 
+                        description = <code>document.createElement('</code>div<code>');</code>
+                        <br /> 
+                        description<code>.className = '</code>memberDescription<code>';</code>
+                        <br /> 
+                        wrap = <code>document.createElement('</code>div<code>');</code>
+                        <br /> 
+                        wrap<code>.className = '</code>wrap<code>';</code>
+                        <br /> 
+                        wrap<code>.innerHTML =</code> orig<code>;</code>
+                        <br /> 
+                        description<code>.appendChild(wrap);</code>
+                        <br /> 
+                        l.<code>innerHTML = '';</code>
+                        <br /> 
+                        l<code>.appendChild(</code>link<code>);</code>
+                        <br /> 
+                        l<code>.appendChild(</code>description<code>);</code>
+                        <br /> 
+                        l<code>.addEventListener('</code>click<code>', function (event) {</code>
+                        <br /> 
+                        clicked = <code>event.target || event.srcElement;</code>
+                        <br /> 
+                        clicker = clicked<code>.parentNode;</code>
+                        <br />
+                        <code>if (</code>clicked<code>.tagName === '</code>A<code>' && </code>clicker<code>.tagName === '</code>LI<code>') {</code>
+                        <br />
+                        <div style="margin-left: 1em;">
+                            <code>for (</code>i = 0<code>;</code> i < li<code>.length;</code> i<code>++) {</code>
+                                <br />
+                                <div style="margin-left: 1em;">
+                                    li<code>[i].classList.remove('</code>clicked<code>');</code>
+                                    <br />
+                                </div>
+                                <code>}</code>
+                                <br /> 
+                                clicker<code>.classList.add('</code>clicked<code>');</code>
+                                <br /> 
+                                l<code>.addEventListener('</code>dblclick<code>', function (event) {</code>
+                                <br />
+                                <div style="margin-left: 1em;">
+                                    web <code>= event.target.parentNode.getElementsByClassName('</code>memberWeb<code>')[0];</code>
+                                    <br />
+                                    <code>if (</code>web <code>!== undefined) {</code>
+                                    <br />
+                                    <div style="margin-left: 1em;">
+                                        win <code>= window.open(web.href, '_blank');</code>
+                                        <br /> 
+                                        win<code>.focus();</code>
+                                        <br />
+                                    </div>
+                                    <code>}</code>
+                                    <br />
+                                </div>
+                                <code>});</code>
+                                <br />
+                        </div>
+                    </div>
+                    <code>}</code>
+                    <br />
+            </section>
+            <section>
+                <p class="središnji" style="margin-top: 20%; font-size: 1.5em; letter-spacing: .2em;">
+                    <span class="crveni">j</span>Query</p>
+            </section>
+            <section style="overflow: auto;">
+                <h4>jQuery</h4>
+                <br />
+                <br />
+                <code>var</code> members = <code>$('</code>#memberOrganisationsList<code>')</code>, li = members<code>.find('</code>li<code>')</code>,
+                <div style="margin-left: 1em;">
+                    link, description, orig, wrap<code>;</code>
+                    <br />
+                </div>
+                li<code>.each(function() {</code>
+                <br />
+                <div style="margin-left: 1em;">
+                    link = <code>$(</code>this<code>).clone();</code>
+                    <br /> 
+                    orig = <code>$(</code>this<code>).children().eq(2).html();</code>
+                    <br /> 
+                    wrap = <code>$('<</code>div<code>>').addClass('</code>wrap<code>').html(</code>orig<code>);</code>
+                    <br /> 
+                    description = <code>$('<</code>div<code>>').addClass('</code>memberDescription<code>').append(</code>wrap<code>);</code>
+                    <br />
+                    <code>$(</code>this<code>).html('').append(</code>link<code>).append(</code>description<code>).click(function () {</code>
+                    <br />
+                    <div style="margin-left: 1em;">
+                        <code>$(</code>this<code>).addClass('</code>clicked<code>').siblings().removeClass('</code>clicked<code>');</code>
+                    </div>
+                    <code>});</code>
+                    <br />
+                </div>
+                <code>});</code>
+                <br />
+            </section>
+            <section>
+                <h4>umetanje jQuery-a</span>
+                </h4>
+                <p class="središnji" style="margin-top: 20%; font-size: 1.25em; line-height: 1.5em; font-weight: normal;">
+                    <code>&lt;</code>script <code>src="</code><em>adresa-jQuery-datoteke</em><code>"></code><code>&lt;/</code>script<code>></code>
+                    <div class="središnji" style="border-top: 2px solid #ec0; width: 40%; margin: 1em auto">
+                        <br />
+                        <code>&lt;</code><span style="font-weight: normal;">script</span><code>&gt;</code>...<code>&lt;/</code><span style="font-weight: normal;">script</span><code>&gt;</code>
+                        <br />
+                        <br />
+                        <a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank"><code><i>događaj</i>="</code></a>...<code>"</code>
+                    </div>
+                </p>
+            </section>
+            <section>
+                <h4>
+                    HTML <span class="krepak"> / </span>CSS <span class="krepak"> / </span>jQuery <span class="krepak"> (selektori)</span>
+                </h4>
+                <p class="središnji" style="margin-top: 20%; font-size: 1.25em; line-height: 1.5em; font-weight: normal;">
+                    <code>&lt;</code>stvar<code>&gt;</code>
+                    <br />
+                    <br /> stvar
+                    <br />
+                    <br />
+                    <code>$('</code>stvar<code>')</code>
+                </p>
+            </section>
+
+            <section>
+                <h4>
+                    HTML<span class="krepak"> / </span>CSS <span class="krepak"> / </span>jQuery <span class="krepak"> (primjena)</span>
+                </h4>
+                <p class="središnji" style="margin-top: 20%; font-size: 1.25em; line-height: 1.5em; font-weight: normal;">
+                    <code>&lt;</code>stvar <code>id="</code>super<code>"&gt;</code>...<code>&lt;/</code>stvar<code>&gt;</code>
+                    <br />
+                    <br />
+                    <code>#super {</code>obilježje<code>:</code> opis<code>;}</code>
+                    <br />
+                    <br />
+                    <code>$('</code>#super<code>').<a class="cb uklopljena" href="https://api.jquery.com/">radnja()</a>;</code>
+                </p>
+            </section>
+            
+            <section style="overflow: auto;">
+                <h4>
+                    <a class="cb uklopljena" href="https://api.jquery.com/">vrste jQuery radnji (API)</a>
+                </h4>
+                <table class="tri-stupca">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h4>šetnja</h4>
+                            </th>
+                            <th>
+                                <h4>čitanje</h4>
+                            </th>
+                            <th>
+                                <h4>pisanje</h4>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>.find('</code>stvar<code>')</code>
+                            </td>
+                            <td>
+                                <code>.html()</code>
+                            </td>
+                            <td>
+                                <code>.html('</code>novi html<code>')</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.filter('</code>stvari<code>')</code>, <code>.not('</code>druge-stvari<code>')</code>
+                            </td>
+                            <td>
+                                <code>.text()</code>
+                            </td>
+                            <td>
+                                <code>.text('</code>novi tekst<code>')</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.children()</code>
+                            </td>
+                            <td>
+                                <code>.width()</code>
+                            </td>
+                            <td>
+                                <code>.width(</code>l<code>)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.parent()</code>
+                            </td>
+                            <td>
+                                <code>.height()</code>
+                            </td>
+                            <td>
+                                <code>.height(</code>h<code>)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.eq(</code>n<code>)</code>
+                            </td>
+                            <td>
+                                <code>.position()</code>, <code>.offset()</code>
+                            </td>
+                            <td>
+                                <code>.position({'</code>top<code>':</code>y<code>, '</code>left<code>':</code>x<code>})</code>, <code>.offset({'</code>top<code>':</code>y<code>, '</code>left<code>':</code>x<code>})</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.each()</code>
+                            </td>
+                            <td>
+                                <code>.attr('</code>atribut<code>')</code>, <code>.val()</code>, <code>.data()</code>
+                            </td>
+                            <td>
+                                <code>.attr('</code>atribut<code>','</code>nova vrijednost<code>')</code>,
+                                <br />
+                                <code>.addClass('</code>klasa<code>')</code>, <code>.removeClass('</code>klasa<code>')</code>,
+                                <br />
+                                <code>.css({'</code>ob.<code>':'</code>vrij.<code>', </code>ob.<code>':'</code>vrij.<code>', </code>ob.<code>':'</code>vrij.<code>'})</code>, <br />
+                                <code>.animate({'</code>ob.<code>':'</code>vrij.<code>'}, </code>vrijeme<code>)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <code>.get('</code>adresa datoteke<code>')</code>
+                            </td>
+                            <td>
+                                <code>.load('</code>adresa datoteke<code>')</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="zasebni">
+                                <code>.append(stvar)</code>,
+                                <code>.prepend(stvar)</code>,
+                                <code>.before(stvar)</code>,
+                                <code>.after(stvar)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="zasebni">
+                                <code>.on('</code>event<code>')</code>, 
+                                <code>.ready()</code>, 
+                                <code>.hover()</code>, 
+                                <code>.click()</code>,
+                                <code>.keypress()</code>,
+                                <code>.change()</code>,
+                                <code>.submit()</code>,
+                                <code>.scroll()</code>,
+                                <code>.resize()</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <p class="zatvor">Kraj vježbe 11</p>
+            </section>
+        </article>
+        <article id="vježba12">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>JavaScript i DOM</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 12</span>
+                </h1>
+            </section>
+            <section>
+                <h4>
+                    <span class="krepak">JS i jQuery</span> funkcije</h4>
+                <br />
+                <br />
+                <p class="središnji" style="margin-top: 20%; font-size: 1.5em; line-height: 1.5em;">
+                    <em>'chaining'</em><code>, </code><em>'nesting'</em><code>, </code><em>'scope'</em>
+                </p>
+                <p class="središnji" style="margin-top: .5em; font-size: 1em; line-height: 1.5em; font-weight: normal; min-width: 33em;">
+                    $.funk1().funk2().funk3()...<code> | </code>funk1(<span style="font-size: .75em;">funk2(<span style="font-size: .75em;">funk3()</span> )</span> )<code> | </code>funk( a = b ); a = <em>?</em>
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span class="krepak">jQuery</span> &mdash; stvaranje i uklanjanje elemenata</h4>
+                <br />
+                <br />
+                <p class="središnji" style="margin-top: 20%; font-size: 1.5em; line-height: 1.5em;">
+                    <code>$('</code>&lt;stvar&gt;&lt;/stvar&gt;<code>');</code>
+                </p>
+                <p class="središnji" style="margin-top: .5em; font-size: 1em; line-height: 1.5em; font-weight: normal; min-width: 33em;">
+                    $.append();<code> | </code>$.prepend();<code> | </code>$.before();<code> | </code>$.after();<code> | </code>$.remove();
+                </p>
+            </section>
+            <section style="overflow: auto;">
+                <h4>
+                    <a class="cb uklopljena" href="https://api.jquery.com/">vrste jQuery radnji (API)</a>
+                </h4>
+                <table class="tri-stupca">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h4>šetnja</h4>
+                            </th>
+                            <th>
+                                <h4>čitanje</h4>
+                            </th>
+                            <th>
+                                <h4>pisanje</h4>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>.find('</code>stvar<code>')</code>
+                            </td>
+                            <td>
+                                <code>.html()</code>
+                            </td>
+                            <td>
+                                <code>.html('</code>novi html<code>')</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.filter('</code>stvari<code>')</code>, <code>.not('</code>druge-stvari<code>')</code>
+                            </td>
+                            <td>
+                                <code>.text()</code>
+                            </td>
+                            <td>
+                                <code>.text('</code>novi tekst<code>')</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.children()</code>
+                            </td>
+                            <td>
+                                <code>.width()</code>
+                            </td>
+                            <td>
+                                <code>.width(</code>l<code>)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.parent()</code>
+                            </td>
+                            <td>
+                                <code>.height()</code>
+                            </td>
+                            <td>
+                                <code>.height(</code>h<code>)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.eq(</code>n<code>)</code>
+                            </td>
+                            <td>
+                                <code>.position()</code>, <code>.offset()</code>
+                            </td>
+                            <td>
+                                <code>.position({'</code>top<code>':</code>y<code>, '</code>left<code>':</code>x<code>})</code>, <code>.offset({'</code>top<code>':</code>y<code>, '</code>left<code>':</code>x<code>})</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>.each()</code>
+                            </td>
+                            <td>
+                                <code>.attr('</code>atribut<code>')</code>, <code>.val()</code>, <code>.data()</code>
+                            </td>
+                            <td>
+                                <code>.attr('</code>atribut<code>','</code>nova vrijednost<code>')</code>,
+                                <br />
+                                <code>.addClass('</code>klasa<code>')</code>, <code>.removeClass('</code>klasa<code>')</code>,
+                                <br />
+                                <code>.css({'</code>ob.<code>':'</code>vrij.<code>', </code>ob.<code>':'</code>vrij.<code>', </code>ob.<code>':'</code>vrij.<code>'})</code>, <br />
+                                <code>.animate({'</code>ob.<code>':'</code>vrij.<code>'}, </code>vrijeme<code>)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <code>.get('</code>adresa datoteke<code>')</code>
+                            </td>
+                            <td>
+                                <code>.load('</code>adresa datoteke<code>')</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="zasebni">
+                                <code>.append(stvar)</code>,
+                                <code>.prepend(stvar)</code>,
+                                <code>.before(stvar)</code>,
+                                <code>.after(stvar)</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="zasebni">
+                                <code>.on('</code>event<code>')</code>, 
+                                <code>.ready()</code>, 
+                                <code>.hover()</code>, 
+                                <code>.click()</code>,
+                                <code>.keypress()</code>,
+                                <code>.change()</code>,
+                                <code>.submit()</code>,
+                                <code>.scroll()</code>,
+                                <code>.resize()</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <p class="zatvor">Kraj vježbe 12</p>
+            </section>
+        </article>
+    </article>
+    <article id="vježba13">
+        <section>
+            <h1 class="otvorniNaslov">
+                <span>Digitalni multimedij 2</span>
+                <br />
+                <small>JavaScript plugin-i</small>
+                <br />
+                <span id="brojVježbe" class="običanTekst">&mdash; vježba 13</span>
+            </h1>
+        </section>
+        <section>
+            <h4>
+                <span class="krepak">JS </span>library i plugin</h4>
+            <br />
+            <br />
+            <p class="središnji" style="margin-top: 20%; line-height: 1.5em;">
+                <code>&lt;script src="</code><em>jQuery.js</em><code>"&gt;&lt;/script&gt;</code>
+            </p>
+            <p class="središnji" style="margin-top: 5%; line-height: 1.5em;">
+                <code>&lt;script src="</code><em>js_plugin.js</em><code>"&gt;&lt;/script&gt;</code>
+            </p>
+            
+        </section>
+        <section>
+            <h4>probe plugin-a</h4>
+            <p class="središnji" style="margin-top: 20%;">
+                <span class="zrno">&raquo;</span>
+                <a class="cb" href="materijali/vj13/plugin-probe/index.html">jQuery plugin-i</a>
+                <span class="zrno">&laquo;</span>
+            </p>
+        </section>
+        <section>
+            <p class="zatvor">Kraj vježbe 13</p>
+        </section>
+    </article> -->
+        
+    </main>
+
+    <canvas id="kursor" width="100" height="300"></canvas>
+    <script src="pogon/kursorCanvas.js"></script>
+    <script src="pogon/ilustracije.js"></script>
+    <script src="pogon/navigacija.js"></script>
+</body>
+
+</html>

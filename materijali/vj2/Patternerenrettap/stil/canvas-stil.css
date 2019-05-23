@@ -1,0 +1,161 @@
+html, body div, main, section, article, aside, nav, canvas {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    background-color: #333;
+    color: #a98;
+    /*font-family:  sans-serif;*/
+    padding-top: 20px;
+}
+body{
+    margin: 7px 7px 0;
+    width: calc(100% - 19px);
+    position: relative;
+}
+#glavniCanvas, #spremnikPrikaza figure {
+    float: left;
+    margin: 10px 20px 10px 0;
+    border: 1px dotted #a98;
+    z-index: 5000;
+}
+#spremnikPrikaza img {
+    border-bottom: 1px dotted #a98;
+}
+#spremnikPrikaza {
+    margin-top: 20px;
+    display: none;
+}
+#spremnikPrikaza figcaption {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#glavniCanvas, #krasniCanvas {
+    float: none;
+    margin: 0 auto;
+    display: none;
+}
+#krasniCanvas {
+    padding: 0;
+    margin: -1em 0 -0.75em;
+    display: inline;
+    border: 0;
+    cursor: crosshair;
+}
+#logoCanvas {
+    cursor: alias;
+}
+
+#kontrole {
+    position: fixed;
+    top: 0;
+    /*width: 100%;*/
+    width: calc(100% - 50px);
+    overflow: hidden;
+    background-color: #333;
+    z-index: 10000;
+    padding: 15px;
+    padding-right: 35px;
+    opacity: 0.85;
+    display: none;
+/*    -webkit-transition: opacity 1s;
+    transition: opacity 1s;*/
+}
+#kontrole input, #kontrole select, #kontrole button {
+    margin-bottom: 10px;
+    margin-right: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #444;
+    color: #a98;
+    border: 1px solid #444;
+}
+#kontrole input[type=checkbox] {
+    display: none;
+}
+#kontrole input.zadržiBox {
+    display: initial;
+}
+#kontrole label.zadržiBox {
+    width: auto;
+}
+#kontrole span {
+    display: inline-block;
+    position: relative;
+}
+#kontrole fieldset {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+}
+#kontrole input[type=range] {
+    position: absolute;
+    left: -53px;
+    bottom: -10px;
+    width: 100px;
+    opacity: 0.2;
+    cursor: ew-resize;
+}
+#polegnutiFormat, #uspravniFormat {
+    display: none;
+}
+label[for=polegnutiFormat] div, label[for=uspravniFormat] div {
+    display: inline-block;
+    margin: 0 8px;
+    overflow: hidden;
+    border: 1px solid #a98;
+    color: transparent;
+    font-size: 2em;
+    line-height: .5em;
+    cursor: pointer;
+}
+label[for=polegnutiFormat] div {
+    width: 20px; height: 12.5px;
+}
+label[for=uspravniFormat] div {
+    width: 12.5px; height: 20px;
+    margin-right: 30px;
+    margin-bottom: -5px;
+}
+label.taj div {
+    color: #a98;
+}
+
+input + label {
+    margin: 0 .5em 0 -.35em;
+    cursor: pointer;
+    display: inline-block;
+    width: .9em;
+    text-align: center;
+}
+#logo, #logoCanvas {
+    font: normal normal 70px 'EngrvrsOldEng BT', 'Oldschwab Becker', 'CloisterBlack BT';
+    border: 0;
+    margin: 0;
+    margin-left: -15px;
+    width: 700px;
+    height: 100px;
+    text-indent: -9999px;
+    letter-spacing: 0.05em;
+}
+#canvasPaleta {
+    margin-top: 120px;
+}
+#podnožje {
+    display: block;
+    font-size: .7em;
+    opacity: .8;
+    padding: 10px;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
