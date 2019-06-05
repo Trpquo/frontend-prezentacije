@@ -1093,7 +1093,7 @@
                 <p>(CSS tipografsko oblikovanje)</p>
             </section>
             <section>
-                <p class="zatvor">Kraj vježbe 4</p>
+                <p class="zatvor">Kraj vježbe 11</p>
             </section>
         </article>
 
@@ -1184,23 +1184,13 @@
                 </ol>
             </section>
             <section>
-                <h4>flexBox</h4>
-
-                <!-- DODATI SADRŽAJA -->
-            </section>
-            <section>
-                <h4>gridContainer</h4>
-
-                <!-- DODATI SADRŽAJA -->
-            </section>
-            <section>
                     <h3 class="kardinal">Zadatak
                         <span class="brojćek">5</span>
                     </h3>
                     <p>(CSS prijelom)</p>
                 </section>
                 <section>
-                    <p class="zatvor">Kraj vježbe 8</p>
+                    <p class="zatvor">Kraj vježbe 12</p>
                 </section>
         </article>
 
@@ -1209,9 +1199,110 @@
                 <h1 class="otvorniNaslov">
                     <span>Digitalni multimedij 2</span>
                     <br />
-                    <small>CSS specifičnost, @media, animacije i transformacije</small>
+                    <small>CSS automatski prijelom</small>
                     <br />
                     <span id="brojVježbe" class="običanTekst">&mdash; vježba 6</span>
+                </h1>
+            </section>
+            <section>
+                    <h4><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="cb" target="_blank">flexBox</a></h4>
+                    
+                    <br><br>
+                    <p>
+                        <i>.container</i> <code>{</code>
+                        <div class="uvlaka">
+                            <code>display: </code><i>flex</i><code>;</code><br>
+                            <code>flex-direction: </code><i>row</i> | <i>column</i> | <i>row-reverse</i> | <i>column-reverse</i><code>;</code><br>
+                            <code>flex-wrap: </code><i>nowrap</i> | <i>wrap</i> | <i>wrap-reverse</i><code>;</code><br>
+                            ...ili <code>flex-flow: </code>[flex-direction] [flex-wrap]<code>;</code><br><br>
+                            <code>justify-content: </code><i>flex-start</i> | <i>flex-end</i> | <i>center</i> | <i>space-between</i> | <i>space-around</i> | <i>space-evenly</i><code>;</code><br>
+                            <code>align-items: </code><i>flex-start</i> | <i>flex-end</i> | <i>center</i> | <i>stretch</i><code>;</code><br>
+                            <code>align-content: </code><i>flex-start</i> | <i>flex-end</i> | <i>center</i> | <i>stretch</i> | <i>space-between</i> | <i>space-around</i><code>;</code><br>
+                        </div>
+                        <code>}</code>
+                    </p>
+                </section>
+                <section>
+                    <h4><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="cb" target="_blank">flex item</a></h4>
+                    <br><br>
+                    <p>
+                        <i>.item</i> <code>{</code>
+                            <div class="uvlaka">
+                                <code>flex-grow: </code>&lt;broj&gt;<code>;</code><br>
+                                <code>flex-shrink: </code>&lt;broj&gt;<code>;</code><br>
+                                <code>flex-basis: </code>&lt;veličina&gt;<code>;</code><br>
+                                ...ili <code>flex: </code>[flex-grow] [flex-shrink] [flex-basis]<code>;</code><br><br>
+                                <code>align-self: </code><i>flex-start</i> | <i>flex-end</i> | <i>center</i><code>;</code><br>
+                                <code>order: </code>&lt;broj&gt;<code>;</code><br>
+                        </div>
+                        <code>}</code>
+                    </p>
+                </section>    
+                <section>
+                    <h4><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="cb" target="_blank">gridContainer</a></h4>
+                    <br><br>
+                    <p>
+                        <i>.container</i> <code>{</code>
+                            <div class="uvlaka">
+                                <code>display: </code><i>grid</i><code>;</code><br>
+                                <code>grid-template-columns: </code>&lt;veličina&gt; | repeat(&lt;broj&gt; | auto-fill | auto-fit, &lt;veličina&gt;) | minmax(&lt;veličina&gt;, &lt;veličina&gt;)<code>;</code><br>
+                                <code>grid-template-rows: </code>&lt;veličina&gt; | repeat(&lt;broj&gt; | auto-fill | auto-fit, &lt;veličina&gt;) | minmax(&lt;veličina&gt;, &lt;veličina&gt;)<code>;</code><br>
+                                <code>grid-template-areas: </code>&lt;matrica&gt;<code>;</code><br><br>
+                                <code>grid-auto-columns: </code>&lt;veličina&gt; | repeat(&lt;broj&gt;, &lt;veličina&gt;) | minmax(&lt;veličina&gt;, &lt;veličina&gt;)<code>;</code><br>
+                                <code>grid-auto-rows: </code>&lt;veličina&gt; | repeat(&lt;broj&gt;, &lt;veličina&gt;) | minmax(&lt;veličina&gt;, &lt;veličina&gt;)<code>;</code><br>
+                                <code>grid-auto-flow: </code>row | column<code>;</code><br><br>
+                                ...ili <code>grid: </code>&lt;sve&gt;<code>;</code><br><br>
+                                <code>justify-items: </code><i>start</i> | <i>end</i> | <i>center</i> | <i>stretch</i><code>;</code><br>
+                                <code>align-items: </code><i>start</i> | <i>end</i> | <i>center</i> | <i>stretch</i><code>;</code><br>
+                                ...ili <code>place-items: </code>[align-items] / [justify-items]<code>;</code><br>
+                                <code>justify-content: </code><i>start</i> | <i>end</i> | <i>center</i> | <i>stretch</i> | <i>space-around</i> | <i>space-between</i> | <i>space-evenly</i><code>;</code><br>
+                                <code>align-content: </code><i>start</i> | <i>end</i> | <i>center</i> | <i>stretch</i> | <i>space-around</i> | <i>space-between</i> | <i>space-evenly</i><code>;</code><br>
+                                ...ili <code>place-content: </code>[align-content] / [justify-content]<code>;</code><br>
+                            </div>
+                            <code>}</code>
+                        </p>
+                    </section>
+                    <section>
+                        <h4><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="cb" target="_blank">grid items</a></h4>
+                        <br><br>
+                        <p>
+                            <i>.item</i> <code>{</code>
+                                <div class="uvlaka">
+                                    <code>grid-column-start: </code>&lt;broj&gt; | &lt;ime linije&gt;<code>;</code><br>
+                                    <code>grid-column-end: </code>&lt;broj&gt; | &lt;ime linije&gt;<code>;</code><br>
+                                    <code>grid-row-start: </code>&lt;broj&gt; | &lt;ime linije&gt;<code>;</code><br>
+                                    <code>grid-row-end: </code>&lt;broj&gt; | &lt;ime linije&gt;<code>;</code><br>
+                                    ...ili <code>grid-column: </code>[grid-column-start] / [grid-column-end]<code>;</code><br>
+                                    ...i <code>grid-row: </code>[grid-row-start] / [grid-row-end]<code>;</code><br><br>
+                                    <code>grid-area: </code>&lt;ime polja&gt;<code>;</code><br><br>
+                                    <code>justify-self: </code><i>start</i> | <i>end</i> | <i>center</i> | <i>stretch</i><code>;</code><br>
+                                    <code>align-self: </code><i>start</i> | <i>end</i> | <i>center</i> | <i>stretch</i><code>;</code><br>
+                                    ...ili <code>place-self: </code>[align-self] / [justify-self]<code>;</code><br>
+
+                                
+                            </div>
+                            <code>}</code>
+                        </p>
+                    </section>
+            <section>
+                    <h3 class="kardinal">Zadatak
+                        <span class="brojćek">6</span>
+                    </h3>
+                    <p>(CSS prijelom)</p>
+                </section>
+                <section>
+                    <p class="zatvor">Kraj vježbe 13</p>
+                </section>
+        </article>
+
+        <article id="vježba7">
+            <section>
+                <h1 class="otvorniNaslov">
+                    <span>Digitalni multimedij 2</span>
+                    <br />
+                    <small>CSS specifičnost, @media, animacije i transformacije</small>
+                    <br />
+                    <span id="brojVježbe" class="običanTekst">&mdash; vježba 7</span>
                 </h1>
             </section>
             <section>

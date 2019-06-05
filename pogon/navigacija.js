@@ -1,4 +1,4 @@
-﻿var vj = 1,
+﻿var vj = 6,
     slide = 0,
     cbveza = 0,
     vježba, targetSlide, brojSlidea, učitavanje = [vj, 1];
@@ -12,11 +12,9 @@ $(document).ready(function() {
             if ($(this).attr('class') == 'prije') {
                 vj--;
                 if (vj == 0) vj = 1;
-                if (vj == 6 || vj == 10) vj--;
             }
             if ($(this).attr('class') == 'poslije') {
                 vj++;
-                if (vj == 6 || vj == 10) vj++;
             }
             slide = 0;
             učitavanje = učitajVježbu(vj);
